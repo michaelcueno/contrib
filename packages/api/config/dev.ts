@@ -50,7 +50,7 @@ export const Config: Schema = {
   },
   googleCloud: {
     bucketName: 'todo',
-    keyDump: 'todo',
+    keyDump: '{"status": "todo"}',
     schedulerSecretKey: 'todo',
     task: {
       googleProjectId: 'todo',

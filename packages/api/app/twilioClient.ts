@@ -1,7 +1,7 @@
 import { Twilio } from 'twilio';
 import { AppConfig } from '../config';
 
-const twilio = new Twilio(AppConfig.twilio.accountSid, AppConfig.twilio.authToken);
+const twilio = AppConfig.environment.isDev ? undefined : new Twilio(AppConfig.twilio.accountSid, AppConfig.twilio.authToken);
 
-export const twilioMessageService = twilio.messages;
-export const twilioVerifyService = twilio.verify.services(AppConfig.twilio.verificationService.sid);
+export const twilioMessageService = twilio?.messages;
+export const twilioVerifyService = AppConfig.environment.isDev ? undefined : twilio.verify.services(AppConfig.twilio.verificationService.sid);

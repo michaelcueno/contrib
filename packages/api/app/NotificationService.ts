@@ -3,7 +3,6 @@ import Handlebars from 'handlebars';
 import path from 'path';
 import { Airhorn, ProviderType } from 'airhorn';
 
-import { AppError, ErrorCode } from '../errors';
 import { AppLogger } from '../logger';
 import { AppConfig } from '../config';
 import { CloudTaskService } from './CloudTaskService';
@@ -25,18 +24,29 @@ export enum MessageTemplate {
   INVITED = 'invited',
 }
 
-const airhornClient = new Airhorn({
-  TEMPLATE_PATH: `${__dirname}/../templates`,
-  TWILIO_SMS_ACCOUNT_SID: AppConfig.twilio.accountSid,
-  TWILIO_SMS_AUTH_TOKEN: AppConfig.twilio.authToken,
-});
+export interface NotificationService {
+  sendMessageNow(phoneNumber: string, template: string, context: object): Promise<void>;
+  sendMessageLater(
+    phoneNumber: string,
+    template: MessageTemplate,
+    context?: { [key: string]: any },
+  ): Promise<void>;
+}
 
-export class NotificationService {
-  constructor(private readonly cloudTaskService: CloudTaskService) {}
+export class NotificationsImpl implements NotificationService {
+  constructor(private readonly cloudTaskService: CloudTaskService) {
+    this.airhornClient = new Airhorn({
+      TEMPLATE_PATH: `${__dirname}/../templates`,
+      TWILIO_SMS_ACCOUNT_SID: AppConfig.twilio.accountSid,
+      TWILIO_SMS_AUTH_TOKEN: AppConfig.twilio.authToken,
+    });
+  }
+
+  private airhornClient: Airhorn;
 
   async sendMessageNow(phoneNumber: string, template: string, context: object): Promise<void> {
     try {
-      const result = await airhornClient.send(
+      const result = await this.airhornClient.send(
         phoneNumber,
         AppConfig.twilio.senderNumber,
         template,
@@ -44,7 +54,7 @@ export class NotificationService {
         context,
       );
 
-      let message;
+      let message: string;
 
       try {
         message = await this.renderMessage(template, context);
@@ -78,3 +88,14 @@ export class NotificationService {
     return Handlebars.compile(file)(context);
   }
 }
+
+export class DevNotificationService implements NotificationService {
+  sendMessageNow(phoneNumber: string, template: string, _context: object): Promise<void> {
+    console.log(`dev - would have sent ${template} to ${phoneNumber}`);
+    return undefined;
+  }
+  sendMessageLater(phoneNumber: string, template: string, context?: object): Promise<void> {
+    return this.sendMessageNow(phoneNumber, template, context);
+  }
+}
+

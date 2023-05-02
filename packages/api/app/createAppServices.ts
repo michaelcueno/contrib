@@ -3,7 +3,7 @@ import { IAppServices } from './AppServices';
 
 import { EventHub } from './EventHub';
 import { PhoneNumberVerificationService } from './PhoneNumberVerificationService';
-import { NotificationService } from './NotificationService';
+import { DevNotificationService, NotificationsImpl } from './NotificationService';
 import { UserAccountService } from './UserAccount';
 import { InfluencerService } from './Influencer';
 import { InvitationService } from './Invitation';
@@ -17,6 +17,7 @@ import { GCloudStorage } from './GCloudStorage';
 import { CloudflareStreaming } from './CloudflareStreaming';
 import { PaymentService, StripeService } from './Payment';
 import { CloudTaskService } from './CloudTaskService';
+import { AppConfig } from '../config';
 
 export default function createAppServices(connection: Connection): IAppServices {
   const eventHub = new EventHub();
@@ -27,7 +28,7 @@ export default function createAppServices(connection: Connection): IAppServices 
   const assistant = new AssistantService(connection);
   const charity = new CharityService(connection, eventHub, stripeService);
   const ups = new UPSDeliveryService();
-  const notificationService = new NotificationService(cloudTaskService);
+  const notificationService = AppConfig.environment.isDev ? new DevNotificationService() : new NotificationsImpl(cloudTaskService);
   const userAccount = new UserAccountService(
     connection,
     notificationService,
