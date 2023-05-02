@@ -78,20 +78,19 @@ export class AuctionRepository implements IAuctionRepository {
   ): ISearchOptions {
     const mongoose = require('mongoose');
     const charityIds = filters?.charity ? filters?.charity.map((el) => mongoose.Types.ObjectId(el)) : [];
-    return ([
-      [statusFilter, { status: { $in: statusFilter } }],
-      [query, { title: { $regex: (query || '').trim(), $options: 'i' } }],
-      [filters?.maxPrice, { currentPrice: { $gte: filters?.minPrice, $lte: filters?.maxPrice } }],
-      [filters?.auctionOrganizer, { auctionOrganizer: mongoose.Types.ObjectId(filters?.auctionOrganizer) }],
-      [charityIds.length, { charity: { $in: charityIds } }],
-      [filters?.status, { status: { $in: filters?.status } }],
-      [filters?.selectedAuction, { _id: { $ne: filters?.selectedAuction } }],
-      [filters?.winner, { winner: filters?.winner }],
-      [filters?.ids?.length, { _id: { $in: filters?.ids?.map((el) => mongoose.Types.ObjectId(el)) } }],
-    ] as [string, { [key: string]: any }][]).reduce(
-      (hash, [condition, filters]) => ({ ...hash, ...(condition ? filters : {}) }),
-      {},
-    );
+    return (
+      [
+        [statusFilter, { status: { $in: statusFilter } }],
+        [query, { title: { $regex: (query || '').trim(), $options: 'i' } }],
+        [filters?.maxPrice, { currentPrice: { $gte: filters?.minPrice, $lte: filters?.maxPrice } }],
+        [filters?.auctionOrganizer, { auctionOrganizer: mongoose.Types.ObjectId(filters?.auctionOrganizer) }],
+        [charityIds.length, { charity: { $in: charityIds } }],
+        [filters?.status, { status: { $in: filters?.status } }],
+        [filters?.selectedAuction, { _id: { $ne: filters?.selectedAuction } }],
+        [filters?.winner, { winner: filters?.winner }],
+        [filters?.ids?.length, { _id: { $in: filters?.ids?.map((el) => mongoose.Types.ObjectId(el)) } }],
+      ] as [string, { [key: string]: any }][]
+    ).reduce((hash, [condition, filters]) => ({ ...hash, ...(condition ? filters : {}) }), {});
   }
 
   public async handleFollowLogicErrors(

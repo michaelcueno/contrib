@@ -11,9 +11,9 @@ import { setPageTitle } from 'src/helpers/setPageTitle';
 import { useShowNotification } from 'src/helpers/useShowNotification';
 import { AuctionAttachment } from 'src/types/Auction';
 
-import Row from '../common/Row';
 import styles from './styles.module.scss';
 import UploadingDropzone from './UploadingDropzone';
+import Row from '../common/Row';
 
 interface AttachmentsStateInterface {
   uploaded: AuctionAttachment[];

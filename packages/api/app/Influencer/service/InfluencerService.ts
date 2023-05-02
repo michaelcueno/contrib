@@ -39,14 +39,13 @@ export class InfluencerService {
 
   private getSearchOptions(filters: InfluencerFilters): object {
     const mongoose = require('mongoose');
-    return ([
-      [filters?.assistantId, { assistants: filters?.assistantId && mongoose.Types.ObjectId(filters.assistantId) }],
-      [filters?.status, { status: { $in: filters?.status } }],
-      [filters?.query, { name: { $regex: filters?.query.toString().trim(), $options: 'i' } }],
-    ] as [string, { [key: string]: any }][]).reduce(
-      (hash, [condition, filters]) => ({ ...hash, ...(condition ? filters : {}) }),
-      {},
-    );
+    return (
+      [
+        [filters?.assistantId, { assistants: filters?.assistantId && mongoose.Types.ObjectId(filters.assistantId) }],
+        [filters?.status, { status: { $in: filters?.status } }],
+        [filters?.query, { name: { $regex: filters?.query.toString().trim(), $options: 'i' } }],
+      ] as [string, { [key: string]: any }][]
+    ).reduce((hash, [condition, filters]) => ({ ...hash, ...(condition ? filters : {}) }), {});
   }
 
   private getSortOptions = (orderBy: string): string => this.ORDER_SORTS[orderBy];

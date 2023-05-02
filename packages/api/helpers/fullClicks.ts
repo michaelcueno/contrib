@@ -12,7 +12,7 @@ export const fullClicks = (shortClicks, startDate: Dayjs, flag: string) => {
     const date = dayjs(isByHour ? startIntervalHours : startIntervalDays)
       .add(i, isByHour ? 'hour' : 'day')
       .toISOString();
-      
+
     const data = shortClicks.filter((valueFromShortArray) => {
       const currentDate = isByHour
         ? dayjs(valueFromShortArray.date).utc().minute(0).second(0).millisecond(0)

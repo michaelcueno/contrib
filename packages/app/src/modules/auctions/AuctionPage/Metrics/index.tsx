@@ -7,8 +7,8 @@ import ClicksAnalytics from 'src/components/custom/ClicksAnalytics';
 import Loading from 'src/components/custom/Loading';
 import { Metrics as MetricsType } from 'src/types/Metric';
 
-import Row from '../common/Row';
 import styles from './styles.module.scss';
+import Row from '../common/Row';
 
 interface Props {
   metrics: MetricsType | null;

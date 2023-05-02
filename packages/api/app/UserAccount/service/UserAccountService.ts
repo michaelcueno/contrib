@@ -105,7 +105,6 @@ export class UserAccountService {
     stripeId: string,
     input: UserAccountAddress,
   ): Promise<UserAccountAddress> {
-
     const auction = await this.AuctionModel.findById(auctionId);
     if (!auction) {
       AppLogger.error(`Can not find auction #${auctionId}`);

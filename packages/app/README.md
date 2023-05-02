@@ -93,7 +93,6 @@ Example: `const VERSION = '1.1';`
 
 # Required data specified in the .env file:
 
-
 ## For STRIPE
 
 We using STRIPE for monetary transactions. Required data examples:

@@ -1,6 +1,7 @@
 import { DineroObject } from 'dinero.js';
-import { UserAccount } from './UserAccount';
+
 import { Auction } from './Auction';
+import { UserAccount } from './UserAccount';
 
 export interface AuctionBid {
   id: string;

@@ -4,8 +4,8 @@ import clsx from 'clsx';
 import { Col, Image, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-import InfluencerInvitation from '../InfluencerInvitation';
 import styles from './styles.module.scss';
+import InfluencerInvitation from '../InfluencerInvitation';
 
 interface PropTypes {
   icon: string;

@@ -15,8 +15,8 @@ import CharitiesFormFields from 'src/modules/influencers/common/CharitiesFormFie
 import { Charity } from 'src/types/Charity';
 import { UserAccount } from 'src/types/UserAccount';
 
-import { InfluencerOnboardingNavigation } from '../InfluencerOnboardingNavigation';
 import styles from './InfluencerOnboardingCharitiesPage.module.scss';
+import { InfluencerOnboardingNavigation } from '../InfluencerOnboardingNavigation';
 
 interface FormValues {
   favoriteCharities: Charity[];

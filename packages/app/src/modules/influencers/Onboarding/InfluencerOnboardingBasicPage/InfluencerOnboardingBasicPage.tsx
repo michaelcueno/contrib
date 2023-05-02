@@ -12,9 +12,9 @@ import Layout from 'src/components/layouts/Layout';
 import { setPageTitle } from 'src/helpers/setPageTitle';
 import { UserAccount } from 'src/types/UserAccount';
 
+import styles from './InfluencerOnboardingBasicPage.module.scss';
 import { BasicFormFields } from '../../common/BasicFormFields';
 import { InfluencerOnboardingNavigation } from '../InfluencerOnboardingNavigation';
-import styles from './InfluencerOnboardingBasicPage.module.scss';
 
 interface FormValues {
   name: string;

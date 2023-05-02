@@ -10,8 +10,8 @@ import StepByStepPageLayout from 'src/components/layouts/StepByStepPageLayout';
 import { setPageTitle } from 'src/helpers/setPageTitle';
 import { useShowNotification } from 'src/helpers/useShowNotification';
 
-import Row from '../common/Row';
 import styles from './styles.module.scss';
+import Row from '../common/Row';
 
 const EditAuctionPage = () => {
   const { account } = useContext(UserAccountContext);

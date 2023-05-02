@@ -4,8 +4,8 @@ import clsx from 'clsx';
 
 import HeartIcon from 'src/assets/images/Heart';
 
-import AsyncButton from '../AsyncButton';
 import styles from './styles.module.scss';
+import AsyncButton from '../AsyncButton';
 
 interface Props {
   followed?: boolean;

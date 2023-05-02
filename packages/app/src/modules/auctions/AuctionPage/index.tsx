@@ -30,7 +30,11 @@ const AuctionPage: FC<Props> = ({ isDeliveryPage }) => {
   const { account } = useContext(UserAccountContext);
   const [metrics, setMetrics] = useState(null);
 
-  const { subscribeToMore, data: auctionData, error } = useQuery(AuctionQuery, {
+  const {
+    subscribeToMore,
+    data: auctionData,
+    error,
+  } = useQuery(AuctionQuery, {
     variables: { id: auctionId },
     fetchPolicy: 'cache-and-network',
   });

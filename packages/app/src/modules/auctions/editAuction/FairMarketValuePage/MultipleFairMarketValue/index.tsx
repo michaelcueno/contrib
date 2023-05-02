@@ -7,8 +7,8 @@ import InputField from 'src/components/forms/inputs/InputField';
 import MoneyField from 'src/components/forms/inputs/MoneyField';
 import { AuctionItem } from 'src/types/Auction';
 
-import Row from '../../common/Row';
 import styles from './styles.module.scss';
+import Row from '../../common/Row';
 
 interface Props {
   formState: AuctionItem[];

@@ -2,8 +2,8 @@ import { FC, useCallback } from 'react';
 
 import clsx from 'clsx';
 
-import HeartBtn from '../HeartButton';
 import styles from './styles.module.scss';
+import HeartBtn from '../HeartButton';
 
 interface Props {
   followed?: boolean | undefined;

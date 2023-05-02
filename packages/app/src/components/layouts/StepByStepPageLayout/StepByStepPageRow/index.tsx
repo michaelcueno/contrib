@@ -4,8 +4,8 @@ import clsx from 'clsx';
 import { Button, Container } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
 
-import AsyncButton from '../../../buttons/AsyncButton';
 import styles from './styles.module.scss';
+import AsyncButton from '../../../buttons/AsyncButton';
 
 interface Props {
   disabled?: boolean;

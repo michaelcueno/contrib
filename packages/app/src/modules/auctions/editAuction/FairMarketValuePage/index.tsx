@@ -16,9 +16,9 @@ import { trimObject } from 'src/helpers/trimObject';
 import { useShowNotification } from 'src/helpers/useShowNotification';
 import { AuctionItem } from 'src/types/Auction';
 
-import Row from '../common/Row';
 import MultipleFMV from './MultipleFairMarketValue';
 import styles from './styles.module.scss';
+import Row from '../common/Row';
 
 const FairMarketValuePage = () => {
   const { account } = useContext(UserAccountContext);

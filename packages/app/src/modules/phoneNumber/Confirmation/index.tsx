@@ -21,8 +21,8 @@ import { setPageTitle } from 'src/helpers/setPageTitle';
 import { useAuth } from 'src/helpers/useAuth';
 import { UserAccount, UserAccountStatus } from 'src/types/UserAccount';
 
-import Layout from '../Layout';
 import styles from './styles.module.scss';
+import Layout from '../Layout';
 
 const OtpResendDuration = Duration.fromObject({ seconds: 5 });
 
@@ -36,18 +36,13 @@ export default function PhoneNumberConfirmation() {
   });
   const phoneNumber = myAccountData?.myAccount?.phoneNumber;
 
-  const [confirmPhoneNumber, { loading: confirmLoading, error: confirmError }] = useMutation(
-    ConfirmPhoneNumberMutation,
-  );
-  const [
-    confirmPhoneNumberWithInvitation,
-    { loading: confirmInvitationLoading, error: confirmInvitationError },
-  ] = useMutation(ConfirmPhoneNumberWithInvitationMutation);
+  const [confirmPhoneNumber, { loading: confirmLoading, error: confirmError }] =
+    useMutation(ConfirmPhoneNumberMutation);
+  const [confirmPhoneNumberWithInvitation, { loading: confirmInvitationLoading, error: confirmInvitationError }] =
+    useMutation(ConfirmPhoneNumberWithInvitationMutation);
   const [resendConfirmationCode, { loading: otpIsResending, error: resendError }] = useMutation(ResendOtpMutation);
-  const [
-    resendConfirmationCodeWithInvitation,
-    { loading: invitationOtpIsResending, error: invitationResendError },
-  ] = useMutation(ResendOtpWithInvitationMutation);
+  const [resendConfirmationCodeWithInvitation, { loading: invitationOtpIsResending, error: invitationResendError }] =
+    useMutation(ResendOtpWithInvitationMutation);
 
   const [otpSentAt, setOtpSentAt] = useState(DateTime.local());
   const [canResendOtp, setCanResendOtp] = useState(false);

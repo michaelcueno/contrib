@@ -18,7 +18,7 @@
     "typeRoots": ["node_modules/@types", "./src/@types"],
     "baseUrl": ".",
     "jsx": "react-jsx",
-    "useUnknownInCatchVariables": false 
+    "useUnknownInCatchVariables": false
   },
   "include": ["**/*.tsx", "**/*.ts", "./src/setupTests.ts"],
   "exclude": ["node_modules", "**/*.test.ts", "**/*.test.tsx"]

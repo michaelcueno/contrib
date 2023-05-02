@@ -5,9 +5,9 @@ import { Table } from 'react-bootstrap';
 
 import { MIN_BID_STEP_VALUE } from 'src/constants';
 
-import { IFormError } from '../../IFormState';
 import Item from './Item';
 import styles from './styles.module.scss';
+import { IFormError } from '../../IFormState';
 
 interface Props {
   errors?: IFormError;

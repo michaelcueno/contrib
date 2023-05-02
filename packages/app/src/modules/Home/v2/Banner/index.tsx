@@ -3,8 +3,8 @@ import React from 'react';
 import clsx from 'clsx';
 import { Container, Row, Col } from 'react-bootstrap';
 
-import Status from '../Status';
 import styles from './styles.module.scss';
+import Status from '../Status';
 
 export default function Banner() {
   return (

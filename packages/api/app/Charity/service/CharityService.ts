@@ -431,13 +431,12 @@ export class CharityService {
   };
 
   public getSearchOptions(filters: CharityFilters): object {
-    return ([
-      [filters?.status, { status: { $in: filters?.status } }],
-      [filters?.query, { name: { $regex: (filters?.query || '').trim(), $options: 'i' } }],
-    ] as [string, { [key: string]: any }][]).reduce(
-      (hash, [condition, filters]) => ({ ...hash, ...(condition ? filters : {}) }),
-      {},
-    );
+    return (
+      [
+        [filters?.status, { status: { $in: filters?.status } }],
+        [filters?.query, { name: { $regex: (filters?.query || '').trim(), $options: 'i' } }],
+      ] as [string, { [key: string]: any }][]
+    ).reduce((hash, [condition, filters]) => ({ ...hash, ...(condition ? filters : {}) }), {});
   }
 
   public getSortOptions(orderBy: string): string {

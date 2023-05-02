@@ -5,11 +5,11 @@ import clsx from 'clsx';
 import FloatingLabel from 'src/components/forms/inputs/FloatingLabel';
 import { UserAccountContext } from 'src/components/helpers/UserAccountProvider/UserAccountContext';
 
-import { IFormError } from '../IFormState';
 import Charities from './Charities';
 import Duration from './Duration';
 import Prices from './Prices';
 import styles from './styles.module.scss';
+import { IFormError } from '../IFormState';
 
 interface Props {
   disabled?: boolean;

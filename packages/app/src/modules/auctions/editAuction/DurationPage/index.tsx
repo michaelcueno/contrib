@@ -11,8 +11,8 @@ import StepByStepPageLayout from 'src/components/layouts/StepByStepPageLayout';
 import { setPageTitle } from 'src/helpers/setPageTitle';
 import { useShowNotification } from 'src/helpers/useShowNotification';
 
-import Row from '../common/Row';
 import { durationOptions } from './consts';
+import Row from '../common/Row';
 
 const DurationPage = () => {
   const { account } = useContext(UserAccountContext);

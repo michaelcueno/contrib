@@ -14,8 +14,8 @@ import { useAuth } from 'src/helpers/useAuth';
 import { ALLOWED_COUNTRY_NAME, Country } from 'src/types/Country';
 import { UserAccount, UserAccountStatus } from 'src/types/UserAccount';
 
-import Layout from '../Layout';
 import styles from './styles.module.scss';
+import Layout from '../Layout';
 
 export default function PhoneNumberVerification() {
   const { logout } = useAuth();

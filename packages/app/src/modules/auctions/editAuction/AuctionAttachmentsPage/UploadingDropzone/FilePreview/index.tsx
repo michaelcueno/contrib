@@ -3,8 +3,8 @@ import { FC, ReactElement } from 'react';
 import clsx from 'clsx';
 import { Spinner } from 'react-bootstrap';
 
-import previewStyles from '../common/preview.module.scss';
 import styles from './styles.module.scss';
+import previewStyles from '../common/preview.module.scss';
 
 interface Props {
   file: File;

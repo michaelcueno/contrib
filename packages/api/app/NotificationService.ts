@@ -31,7 +31,6 @@ const airhornClient = new Airhorn({
   TWILIO_SMS_AUTH_TOKEN: AppConfig.twilio.authToken,
 });
 
-
 export class NotificationService {
   constructor(private readonly cloudTaskService: CloudTaskService) {}
 
