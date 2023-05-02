@@ -91,7 +91,7 @@ export class NotificationsImpl implements NotificationService {
 
 export class DevNotificationService implements NotificationService {
   sendMessageNow(phoneNumber: string, template: string, _context: object): Promise<void> {
-    console.log(`dev - would have sent ${template} to ${phoneNumber}`);
+    AppLogger.info(`dev - would have sent ${template} to ${phoneNumber}`);
     return undefined;
   }
   sendMessageLater(phoneNumber: string, template: string, context?: object): Promise<void> {

@@ -22,7 +22,7 @@ export const Config: Schema = {
     uri: 'mongodb://localhost:27017',
   },
   auth: {
-    apiUrl: 'todo',
+    apiUrl: 'http://localhost:3000',
     google: {
       clientId: 'todo',
       clientSecret: 'todo',

@@ -1,5 +1,3 @@
-import { Twilio } from 'twilio';
-
 import { AppError, ErrorCode } from '../errors';
 import { AppLogger } from '../logger';
 import { AppConfig } from '../config';
@@ -7,6 +5,10 @@ import { twilioVerifyService } from './twilioClient';
 
 export class PhoneNumberVerificationService {
   async createVerification(phoneNumber: string): Promise<void> {
+    if (AppConfig.environment.isDev) {
+      AppLogger.info(`Development verification, code is not checked`);
+      return;
+    }
     try {
       const verification = await twilioVerifyService.verifications.create({ to: phoneNumber, channel: 'sms' });
       AppLogger.debug(`created twilio verification: ${JSON.stringify(verification)}`);
@@ -21,6 +23,10 @@ export class PhoneNumberVerificationService {
   }
 
   async confirmVerification(phoneNumber: string, otp: string): Promise<boolean> {
+    if (AppConfig.environment.isDev) {
+      AppLogger.info(`Development verification - good job, you did it!`);
+      return true;
+    }
     try {
       const verificationResult = await twilioVerifyService.verificationChecks.create({
         to: phoneNumber,
