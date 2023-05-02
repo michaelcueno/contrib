@@ -93,7 +93,7 @@ const Slider: FC<Props> = ({ items }) => {
 
   return (
     <div ref={sliderWrapper} className="multi-carousel">
-      <RSlider {...settings}>{items}</RSlider>
+      <RSlider {...settings}>{items as any}</RSlider>
     </div>
   );
 };

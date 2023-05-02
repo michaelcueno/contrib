@@ -1,10 +1,10 @@
-import { Connection, Types, ClientSession } from 'mongoose';
+import { Connection } from 'mongoose';
 import dayjs, { Dayjs } from 'dayjs';
 import Dinero, { Currency } from 'dinero.js';
 import Stripe from 'stripe';
 
 import { AuctionModel, IAuctionModel } from '../mongodb/AuctionModel';
-import { AuctionMetricModel, IAuctionMetricModel } from '../mongodb/AuctionMetricModel';
+import { AuctionMetricModel } from '../mongodb/AuctionMetricModel';
 import { AuctionAssetModel, IAuctionAssetModel } from '../mongodb/AuctionAssetModel';
 import { AuctionAttachmentsService } from './AuctionAttachmentsService';
 import { UserAccountModel } from '../../UserAccount/mongodb/UserAccountModel';
@@ -25,7 +25,7 @@ import { BidModel, IBidModel } from '../../Bid/mongodb/BidModel';
 
 import { AuctionAttachmentInput } from '../graphql/model/AuctionAttachmentInput';
 import { AuctionInput } from '../graphql/model/AuctionInput';
-import { GCloudStorage, IFile } from '../../GCloudStorage';
+import { GCloudStorage } from '../../GCloudStorage';
 import { ICreateAuctionBidInput } from '../graphql/model/CreateAuctionBidInput';
 
 import { CloudflareStreaming } from '../../CloudflareStreaming';
@@ -34,7 +34,6 @@ import { CharityService } from '../../Charity';
 
 import { AppError, ErrorCode } from '../../../errors';
 import { AppLogger } from '../../../logger';
-import { makeClicksByDay } from '../../../helpers/makeClicksByDay';
 import { getMetricByEntity } from '../../../helpers/getMetricByEntity';
 import { objectTrimmer } from '../../../helpers/objectTrimmer';
 import { fullClicks } from '../../../helpers/fullClicks';
@@ -56,7 +55,6 @@ export class AuctionService {
   private readonly CharityModel = CharityModel(this.connection);
   private readonly InfluencerModel = InfluencerModel(this.connection);
   private readonly BidModel = BidModel(this.connection);
-  private readonly AssetModel = AuctionAssetModel(this.connection);
   private readonly auctionRepository: IAuctionRepository = new AuctionRepository(this.connection);
 
   constructor(
@@ -991,7 +989,9 @@ export class AuctionService {
       cloudflareUrl: uid ? CloudflareStreaming.getVideoStreamUrl(uid) : null,
       thumbnail: uid ? CloudflareStreaming.getVideoPreviewUrl(uid) : null,
       originalFileName: filename,
-      ...rest,
+      url: rest.url,
+      type: rest.type,
+      forCover: rest.forCover,
     };
   }
 
@@ -1267,6 +1267,14 @@ export class AuctionService {
       isFailed: status === AuctionStatus.FAILED,
       isSold: status === AuctionStatus.SOLD,
       isStopped: status === AuctionStatus.STOPPED,
+      endsAt: model.endsAt,
+      delivery: model.delivery,
+      title: model.title,
+      startsAt: model.startsAt,
+      stoppedAt: model.stoppedAt,
+      totalBids: model.totalBids,
+      description: model.description,
+      password: model.password,
     };
   }
 }

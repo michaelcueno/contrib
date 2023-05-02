@@ -13,9 +13,9 @@ import { useAuth } from 'src/helpers/useAuth';
 import { useRedirectWithReturnAfterLogin } from 'src/helpers/useRedirectWithReturnAfterLogin';
 import { useShowNotification } from 'src/helpers/useShowNotification';
 
+import styles from './styles.module.scss';
 import HeartBtn from '../../../buttons/HeartButton';
 import SwipeableLink from '../../../wrappers/SwipeableLink';
-import styles from './styles.module.scss';
 
 type Props = {
   item: any;

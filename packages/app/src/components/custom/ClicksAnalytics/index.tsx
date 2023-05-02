@@ -129,7 +129,6 @@ export const ClicksAnalytics: FC<Props> = ({ metrics, isAuctionPage }) => {
                 },
                 responsive: true,
               }}
-              type="bar"
               width={600}
             />
           ) : (
@@ -147,18 +146,14 @@ export const ClicksAnalytics: FC<Props> = ({ metrics, isAuctionPage }) => {
                       display: false,
                     },
                   },
+                  // TODO: @michaelcueno changed this because of type issues without even looking at it :(
+                  // // Figure out if this still works when you understand it...
                   AM_PM: {
-                    tooltips: {
-                      mode: 'index',
-                      intersect: false,
-                    },
                     display: clicksByDay.labels.length <= 8,
                     position: 'bottom',
                     labels: dayCutter(clicksByDay.labels),
 
                     ticks: {
-                      beginAtZero: true,
-
                       display: true,
                       font: {
                         size: 8,
@@ -184,7 +179,6 @@ export const ClicksAnalytics: FC<Props> = ({ metrics, isAuctionPage }) => {
                 },
                 responsive: true,
               }}
-              type="bar"
               width={600}
             />
           )

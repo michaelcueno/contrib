@@ -509,7 +509,16 @@ export class CharityService {
         currency: AppConfig.app.defaultCurrency as Dinero.Currency,
         amount: totalRaisedAmount,
       }),
-      ...rest,
+      name: rest.name,
+      profileStatus: rest.profileStatus,
+      profileDescription: rest.profileDescription,
+      website: rest.website,
+      status: rest.status,
+      stripeStatus: rest.stripeStatus,
+      activatedAt: rest.activatedAt,
+      stripeAccountId: rest.stripeAccountId,
+      createdAt: rest.createdAt,
+      onboardedAt: rest.onboardedAt,
     };
   }
 }

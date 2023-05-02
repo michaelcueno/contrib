@@ -30,7 +30,7 @@ export const Modal: FC<Props> = ({ open, onClose, onConfirm, mutation, auction }
         onConfirm(auction);
         onClose();
       } else {
-        window.location.reload(false);
+        window.location.reload();
       }
     });
   }, [deleteAuction, auction, onConfirm, onClose]);

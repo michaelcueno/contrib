@@ -3,9 +3,9 @@ import { forwardRef, BaseSyntheticEvent, KeyboardEventHandler, useCallback } fro
 import clsx from 'clsx';
 import { Form, FloatingLabel as FloatingLabelRb } from 'react-bootstrap';
 
+import styles from './styles.module.scss';
 import useField from '../../Form/hooks/useField';
 import useFieldConstraints from '../../Form/hooks/useFieldConstraints';
-import styles from './styles.module.scss';
 
 interface Props {
   name: string;
@@ -99,5 +99,7 @@ const FloatingLabel = forwardRef<HTMLInputElement | null, Props>(
     );
   },
 );
+
+FloatingLabel.displayName = 'FloatingLabel';
 
 export default FloatingLabel;

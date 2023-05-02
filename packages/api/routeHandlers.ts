@@ -140,8 +140,9 @@ export default function appRouteHandlers(
   });
 
   app.get('/api/v1/auth/logout', (req, res) => {
-    req.logOut();
-    res.redirect((req?.query?.redirectURL || AppConfig.app.url).toString());
+    req.logOut(() => {
+      res.redirect((req?.query?.redirectURL || AppConfig.app.url).toString());
+    });
   });
 
   app.post('/api/v1/stripe/', express.raw({ type: 'application/json' }), async (request, response) => {

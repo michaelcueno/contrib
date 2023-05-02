@@ -31,7 +31,7 @@ export const Modal: FC<Props> = ({ open, onClose, mutation, auction }) => {
   const onSubmit = useCallback(() => {
     SetAuctionStatusToStopped({
       variables: { id: auction?.id },
-    }).then(() => window.location.reload(false));
+    }).then(() => window.location.reload());
   }, [SetAuctionStatusToStopped, auction?.id]);
 
   const confirmContent = () => {

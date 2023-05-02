@@ -24,7 +24,9 @@ export default function Assistants() {
     fetchPolicy: 'cache-and-network',
   });
 
-  useEffect(() => getAssistatsList(), [getAssistatsList]);
+  useEffect(() => {
+    getAssistatsList();
+  }, [getAssistatsList]);
 
   const influencer = data?.influencer;
   const assistants = influencer?.assistants || [];

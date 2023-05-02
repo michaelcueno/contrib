@@ -72,7 +72,9 @@ export default function Invitations() {
     [showMessage, showError, decline, refreshData],
   );
 
-  useEffect(() => refreshData(), [refreshData]);
+  useEffect(() => {
+    refreshData();
+  }, [refreshData]);
 
   if (error) return null;
 

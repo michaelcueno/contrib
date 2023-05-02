@@ -611,6 +611,15 @@ export class InvitationService {
       id: model._id.toString(),
       parentEntityId: parentEntityId?.toString(),
       status: this.status(model),
+      accepted: rest.accepted,
+      slug: rest.slug,
+      updatedAt: rest.updatedAt,
+      createdAt: rest.createdAt,
+      parentEntityType: rest.parentEntityType,
+      firstName: rest.firstName,
+      phoneNumber: rest.phoneNumber,
+      lastName: rest.lastName,
+      welcomeMessage: rest.welcomeMessage,
       ...rest,
     };
   }

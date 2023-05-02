@@ -5,7 +5,7 @@
   font-weight: 500 !important;
   font-size: 14px !important;
   line-height: 17px;
-  letter-spacing: .025rem;
+  letter-spacing: 0.025rem;
 }
 
 .settled {
@@ -14,12 +14,12 @@
 
 .charityName {
   font-weight: 400 !important;
-  letter-spacing: .05rem !important;
+  letter-spacing: 0.05rem !important;
   font-size: 11px !important;
   line-height: 16.5px;
   width: 100%;
   @media (min-width: $small-weight) {
-    font-size: 12px !important;;
+    font-size: 12px !important;
     line-height: 18px;
   }
 }

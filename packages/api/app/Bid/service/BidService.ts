@@ -80,7 +80,9 @@ export class BidService {
     return {
       id: authzId,
       mongodbId: model._id.toString(),
-      ...rest,
+      createdAt: model.createdAt,
+      phoneNumber: model.phoneNumber,
+      stripeCustomerId: model.stripeCustomerId,
     };
   }
 
@@ -93,7 +95,7 @@ export class BidService {
       bid: Dinero({ amount: bid, currency: bidCurrency as Currency }),
       user: this.makeUser(user),
       auction: auction.constructor.name === 'ObjectId' ? auction : AuctionService.makeAuction(auction),
-      ...rest,
+      createdAt: model.createdAt,
     };
   }
 }

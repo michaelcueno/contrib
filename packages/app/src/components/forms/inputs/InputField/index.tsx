@@ -3,9 +3,9 @@ import { forwardRef, BaseSyntheticEvent, KeyboardEventHandler, useCallback, useE
 import clsx from 'clsx';
 import { Form as BsForm } from 'react-bootstrap';
 
+import styles from './styles.module.scss';
 import useField from '../../Form/hooks/useField';
 import useFieldConstraints from '../../Form/hooks/useFieldConstraints';
-import styles from './styles.module.scss';
 
 const { Group, Label, Control } = BsForm;
 
@@ -112,5 +112,7 @@ const InputField = forwardRef<HTMLInputElement | null, Props>(
     );
   },
 );
+
+InputField.displayName = 'InputField';
 
 export default InputField;

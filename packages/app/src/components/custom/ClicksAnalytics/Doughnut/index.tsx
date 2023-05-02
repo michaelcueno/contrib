@@ -4,8 +4,8 @@ import clsx from 'clsx';
 import { Col } from 'react-bootstrap';
 import { Doughnut } from 'react-chartjs-2';
 
-import styles from '../styles.module.scss';
 import { countries } from './countries';
+import styles from '../styles.module.scss';
 
 interface Props {
   labels: string[] | undefined;
@@ -89,7 +89,6 @@ export const ChartDoughnut: FC<Props> = ({ labels, values, name, isAuctionPage }
             },
           },
         }}
-        type="doughnut"
         width={250}
       />
     </Col>

@@ -74,7 +74,7 @@ export class ShortLinkService {
       id: _id.toString(),
       slug,
       shortLink: ShortLinkService.makeLink({ slug }),
-      ...rest,
+      link: rest.link,
     };
   }
 }

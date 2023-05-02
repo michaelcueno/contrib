@@ -105,7 +105,8 @@ export class AssistantService {
       userAccount: userAccount?.toString(),
       influencerId: influencer?.toString(),
       influencerIds: influencers?.map((item) => item.toString()),
-      ...rest,
+      status: rest.status,
+      name: rest.name,
     };
   }
 }

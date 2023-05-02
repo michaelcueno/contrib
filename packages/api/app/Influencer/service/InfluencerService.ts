@@ -389,7 +389,13 @@ export class InfluencerService {
           createdAt: follower.createdAt,
         };
       }),
-      ...rest,
+      avatarUrl: rest.avatarUrl,
+      name: rest.name,
+      team: rest.team,
+      sport: rest.sport,
+      status: rest.status,
+      onboardedAt: rest.onboardedAt,
+      profileDescription: rest.profileDescription,
     };
   }
 }

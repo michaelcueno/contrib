@@ -56,7 +56,9 @@ export default function AdminAuctionPage() {
   const customerInformation = customer?.getCustomerInformation;
   const showEditButton = !auction?.isSettled && !auction?.isSold && !auction?.isFailed;
 
-  useEffect(() => getAuctionData(), [getAuctionData]);
+  useEffect(() => {
+    getAuctionData();
+  }, [getAuctionData]);
 
   const handleChargeBid = useCallback(
     async (item) => {

@@ -27,7 +27,9 @@ const MyBids = () => {
   const bidsData = data?.myBids || BLANK_LIST_OBJECT;
   const hasBids = bidsData.items.length > 0;
 
-  useEffect(() => getBidsList(), [getBidsList]);
+  useEffect(() => {
+    getBidsList();
+  }, [getBidsList]);
 
   setPageTitle('My Bids');
 

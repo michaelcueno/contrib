@@ -80,11 +80,9 @@ const Pagination: FC<Props> = ({ totalItems, pageSize, pageSkip, perPage, change
     if (currentPage >= totalPages - PAGINATION_LIMIT && totalPages > TOTAL_LIMIT) {
       return (
         <>
-          {[
-            totalPagesArray[0],
-            DOTS,
-            ...totalPagesArray.splice(totalPages - PAGINATION_LIMIT, totalPages),
-          ].map((e: number | string, index) => renderPageNumber(e, index))}
+          {[totalPagesArray[0], DOTS, ...totalPagesArray.splice(totalPages - PAGINATION_LIMIT, totalPages)].map(
+            (e: number | string, index) => renderPageNumber(e, index),
+          )}
         </>
       );
     }

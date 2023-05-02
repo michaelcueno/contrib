@@ -1,7 +1,7 @@
 import { FC, useState } from 'react';
 
-import AuthBtn from '../AuthBtn';
 import { Modal } from './Modal';
+import AuthBtn from '../AuthBtn';
 
 const DELAY_VALUE_MS = 200;
 
