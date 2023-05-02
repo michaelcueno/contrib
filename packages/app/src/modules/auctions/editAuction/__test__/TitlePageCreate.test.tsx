@@ -1,14 +1,14 @@
-import { act } from 'react-dom/test-utils';
-import { mount, ReactWrapper } from 'enzyme';
-import { Route, MemoryRouter } from 'react-router-dom';
 import { MockedProvider } from '@apollo/client/testing';
-import { ToastProvider } from 'react-toast-notifications';
+import { mount, ReactWrapper } from 'enzyme';
 import { createMemoryHistory } from 'history';
+import { act } from 'react-dom/test-utils';
+import { Route, MemoryRouter } from 'react-router-dom';
+import { ToastProvider } from 'react-toast-notifications';
 
-import Form from 'src/components/forms/Form/Form';
-import { testAccount } from 'src/helpers/testHelpers/account';
-import { UserAccountContext } from 'src/components/helpers/UserAccountProvider/UserAccountContext';
 import { CreateAuctionMutation } from 'src/apollo/queries/auctions';
+import Form from 'src/components/forms/Form/Form';
+import { UserAccountContext } from 'src/components/helpers/UserAccountProvider/UserAccountContext';
+import { testAccount } from 'src/helpers/testHelpers/account';
 
 import TitlePageEdit from '../TitlePage';
 

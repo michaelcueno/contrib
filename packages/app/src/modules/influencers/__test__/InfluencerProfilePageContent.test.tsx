@@ -1,19 +1,21 @@
 import React from 'react';
-import { act } from 'react-dom/test-utils';
-import { mount, ReactWrapper } from 'enzyme';
+
 import { InMemoryCache } from '@apollo/client';
-import { MemoryRouter } from 'react-router-dom';
 import { MockedProvider } from '@apollo/client/testing';
+import { mount, ReactWrapper } from 'enzyme';
+import { act } from 'react-dom/test-utils';
+import { MemoryRouter } from 'react-router-dom';
 import { ToastProvider } from 'react-toast-notifications';
 
-import { AuctionStatus } from 'src/types/Auction';
+import { AuctionsListQuery } from 'src/apollo/queries/auctions';
+import { FollowInfluencer, UnfollowInfluencer } from 'src/apollo/queries/influencers';
 import WatchBtn from 'src/components/buttons/WatchBtn';
 import AuctionCard from 'src/components/custom/AuctionCard';
 import { auction } from 'src/helpers/testHelpers/auction';
-import { AuctionsListQuery } from 'src/apollo/queries/auctions';
-import { FollowInfluencer, UnfollowInfluencer } from 'src/apollo/queries/influencers';
-import { InfluencerProfilePageContent } from '../InfluencerProfilePage/InfluencerProfilePageContent';
 import * as auth from 'src/helpers/useAuth';
+import { AuctionStatus } from 'src/types/Auction';
+
+import { InfluencerProfilePageContent } from '../InfluencerProfilePage/InfluencerProfilePageContent';
 
 jest.spyOn(React, 'useEffect').mockImplementationOnce((f) => f());
 

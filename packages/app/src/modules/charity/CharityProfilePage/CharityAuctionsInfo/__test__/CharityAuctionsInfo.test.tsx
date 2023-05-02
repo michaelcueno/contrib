@@ -1,11 +1,10 @@
 import { shallow, ShallowWrapper } from 'enzyme';
 
-import { AuctionStatus } from 'src/types/Auction';
-import { auction } from 'src/helpers/testHelpers/auction';
 import { NoAuctionsInfo } from 'src/components/custom/AuctionsStatusInfo/NoAuctionsInfo';
+import { auction } from 'src/helpers/testHelpers/auction';
+import { AuctionStatus } from 'src/types/Auction';
 
 import { CharityAuctionsInfo } from '../index';
-
 
 const props: any = {
   name: 'testName',

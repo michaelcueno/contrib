@@ -12,7 +12,7 @@ describe('Row', () => {
   describe('with all params', () => {
     it('renders component', () => {
       const wrapper = mount(
-        <Row description="description" title="title" childrenWrapperClassName="pb-0">
+        <Row childrenWrapperClassName="pb-0" description="description" title="title">
           {<>test</>}
         </Row>,
       );

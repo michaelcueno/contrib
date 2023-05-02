@@ -1,7 +1,8 @@
 import { mount, ReactWrapper } from 'enzyme';
-import Form from 'src/components/forms/Form/Form';
-import { Form as FinalForm } from 'react-final-form';
 import { act } from 'react-dom/test-utils';
+import { Form as FinalForm } from 'react-final-form';
+
+import Form from 'src/components/forms/Form/Form';
 
 describe('Form', () => {
   const props: any = {

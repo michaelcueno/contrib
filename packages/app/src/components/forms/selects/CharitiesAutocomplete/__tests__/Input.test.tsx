@@ -1,12 +1,14 @@
 import React from 'react';
-import { mount } from 'enzyme';
+
 import { InMemoryCache } from '@apollo/client';
 import { MockedProvider } from '@apollo/client/testing';
+import { mount } from 'enzyme';
+import { act } from 'react-dom/test-utils';
+
+import { CharitiesListQuery } from 'src/apollo/queries/charities';
 import SearchInput from 'src/components/forms/inputs/SearchInput';
 import CharitiesSearchInput from 'src/components/forms/selects/CharitiesAutocomplete/Input';
-import { CharitiesListQuery } from 'src/apollo/queries/charities';
 import { charity } from 'src/helpers/testHelpers/charity';
-import { act } from 'react-dom/test-utils';
 
 const cache = new InMemoryCache();
 

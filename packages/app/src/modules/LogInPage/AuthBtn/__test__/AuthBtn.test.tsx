@@ -1,7 +1,7 @@
 import { MockedProvider } from '@apollo/client/testing';
 import { mount, ReactWrapper } from 'enzyme';
-import { act } from 'react-dom/test-utils';
 import { Button } from 'react-bootstrap';
+import { act } from 'react-dom/test-utils';
 import { ToastProvider } from 'react-toast-notifications';
 
 import * as auth from 'src/helpers/useAuth';

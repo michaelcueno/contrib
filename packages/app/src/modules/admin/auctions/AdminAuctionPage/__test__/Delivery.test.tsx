@@ -1,12 +1,13 @@
+import { MockedProvider } from '@apollo/client/testing';
+import { act } from '@testing-library/react';
 import { mount } from 'enzyme';
 import { ToastProvider } from 'react-toast-notifications';
-import { MockedProvider } from '@apollo/client/testing';
 
-import { auctionForAdminPage } from 'src/helpers/testHelpers/auction';
 import { ShippingRegistrationMutation } from 'src/apollo/queries/auctions';
 import AsyncButton from 'src/components/buttons/AsyncButton';
+import { auctionForAdminPage } from 'src/helpers/testHelpers/auction';
+
 import { Delivery } from '../Delivery';
-import { act } from '@testing-library/react';
 
 describe('Should render correctly "Details"', () => {
   const props: any = {

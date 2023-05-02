@@ -1,7 +1,8 @@
 import { render } from '@testing-library/react';
 
-import SelectField from '../SelectField';
 import Form from 'src/components/forms/Form/Form';
+
+import SelectField from '../SelectField';
 
 const mockedSumbit = jest.fn();
 const props = {

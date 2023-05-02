@@ -1,6 +1,6 @@
 import { mount, ReactWrapper } from 'enzyme';
-import { MemoryRouter } from 'react-router-dom';
 import { act } from 'react-dom/test-utils';
+import { MemoryRouter } from 'react-router-dom';
 
 import { AuthProvider } from 'src/components/helpers/AuthProvider/AuthProvider';
 

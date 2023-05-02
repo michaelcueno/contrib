@@ -1,16 +1,16 @@
+import { InMemoryCache } from '@apollo/client';
+import { MockedProvider } from '@apollo/client/testing';
+import { mount, ReactWrapper } from 'enzyme';
 import { Button } from 'react-bootstrap';
 import { act } from 'react-dom/test-utils';
-import { mount, ReactWrapper } from 'enzyme';
-import { InMemoryCache } from '@apollo/client';
 import { MemoryRouter } from 'react-router-dom';
-import { MockedProvider } from '@apollo/client/testing';
 import { ToastProvider } from 'react-toast-notifications';
 
+import { InfluencersListQuery } from 'src/apollo/queries/influencers';
+import { ResendInviteMessageMutation } from 'src/apollo/queries/invitations';
 import { ResendInvitationButton } from 'src/components/buttons/ResendInvitationButton';
 import SearchInput from 'src/components/forms/inputs/SearchInput';
 import { AdminPage } from 'src/components/layouts/AdminPage';
-import { InfluencersListQuery } from 'src/apollo/queries/influencers';
-import { ResendInviteMessageMutation } from 'src/apollo/queries/invitations';
 
 import Influencers from '..';
 

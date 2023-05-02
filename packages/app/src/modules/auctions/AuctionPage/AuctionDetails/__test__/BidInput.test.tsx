@@ -1,8 +1,9 @@
 import Dinero from 'dinero.js';
 import { ReactWrapper, mount } from 'enzyme';
 
-import { BidInput } from '../BidButtons/BidInput';
 import Form from 'src/components/forms/Form/Form';
+
+import { BidInput } from '../BidButtons/BidInput';
 
 describe('BidInput', () => {
   const props: any = {

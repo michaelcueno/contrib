@@ -1,5 +1,5 @@
-import { BrowserRouter as Router } from 'react-router-dom';
 import { render } from 'enzyme';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import Status from '../GeneralInformation/About/Status';
 

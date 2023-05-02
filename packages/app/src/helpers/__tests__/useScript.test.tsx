@@ -1,5 +1,6 @@
-import { useScript } from '../useScript';
 import { mount } from 'enzyme';
+
+import { useScript } from '../useScript';
 
 const TestHook = (props: { callback: Function }) => {
   const { callback } = props;

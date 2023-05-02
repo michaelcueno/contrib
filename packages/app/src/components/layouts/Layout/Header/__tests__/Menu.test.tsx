@@ -1,7 +1,8 @@
 import { shallow, ShallowWrapper } from 'enzyme';
 
-import Menu from '../Menu';
 import * as auth from 'src/helpers/useAuth';
+
+import Menu from '../Menu';
 
 const verifiedUser = {
   email: 'johndoe@me.com',

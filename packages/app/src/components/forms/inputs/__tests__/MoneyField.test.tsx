@@ -1,6 +1,7 @@
 import { mount, ReactWrapper } from 'enzyme';
-import MoneyField from 'src/components/forms/inputs/MoneyField';
+
 import Form from 'src/components/forms/Form/Form';
+import MoneyField from 'src/components/forms/inputs/MoneyField';
 
 jest.mock('src/components/forms/Form/hooks/useField', () => () => {
   return {

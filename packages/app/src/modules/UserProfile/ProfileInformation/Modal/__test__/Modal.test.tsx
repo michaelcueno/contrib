@@ -1,16 +1,16 @@
-import { mount, ReactWrapper } from 'enzyme';
 import { SyntheticEvent } from 'react';
 
 import { MockedProvider } from '@apollo/client/testing';
+import { mount, ReactWrapper } from 'enzyme';
+import { act } from 'react-dom/test-utils';
 import { MemoryRouter } from 'react-router-dom';
 import { ToastProvider } from 'react-toast-notifications';
-import { act } from 'react-dom/test-utils';
 
 import Dialog from 'src/components/modals/Dialog';
-import VerificationStep from '../Verification';
-import ConfirmationStep from '../Confirmation';
 
 import Modal from '..';
+import ConfirmationStep from '../Confirmation';
+import VerificationStep from '../Verification';
 
 const mockFn = jest.fn();
 

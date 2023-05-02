@@ -1,13 +1,14 @@
-import { act } from 'react-dom/test-utils';
-import { mount, ReactWrapper } from 'enzyme';
-import { ToastProvider } from 'react-toast-notifications';
-import { BrowserRouter as Router } from 'react-router-dom';
 import { MockedProvider } from '@apollo/client/testing';
+import { mount, ReactWrapper } from 'enzyme';
+import { act } from 'react-dom/test-utils';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { ToastProvider } from 'react-toast-notifications';
+
+import { DeleteAuctionMutation } from 'src/apollo/queries/auctions';
+import AsyncButton from 'src/components/buttons/AsyncButton';
+import { auction } from 'src/helpers/testHelpers/auction';
 
 import { Modal } from '..';
-import { auction } from 'src/helpers/testHelpers/auction';
-import AsyncButton from 'src/components/buttons/AsyncButton';
-import { DeleteAuctionMutation } from 'src/apollo/queries/auctions';
 
 delete window.location;
 window.location = { ...window.location, reload: jest.fn() };

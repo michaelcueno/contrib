@@ -1,13 +1,15 @@
-import { InfluencerProfileQuery, UpdateInfluencerProfileMutation } from 'src/apollo/queries/profile';
-import Form from 'src/components/forms/Form/Form';
-import InfluencerProfileEditPage from '../InfluencerProfileEditPage';
+import { InMemoryCache } from '@apollo/client';
 import { MockedProvider } from '@apollo/client/testing';
 import { mount, ReactWrapper } from 'enzyme';
-import { MemoryRouter } from 'react-router-dom';
-import { InMemoryCache } from '@apollo/client';
-import Layout from 'src/components/layouts/Layout';
 import { act } from 'react-dom/test-utils';
+import { MemoryRouter } from 'react-router-dom';
 import { ToastProvider } from 'react-toast-notifications';
+
+import { InfluencerProfileQuery, UpdateInfluencerProfileMutation } from 'src/apollo/queries/profile';
+import Form from 'src/components/forms/Form/Form';
+import Layout from 'src/components/layouts/Layout';
+
+import InfluencerProfileEditPage from '../InfluencerProfileEditPage';
 
 const mockHistoryFn = jest.fn();
 jest.mock('react-router-dom', () => ({

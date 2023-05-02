@@ -1,13 +1,14 @@
+import { MockedProvider } from '@apollo/client/testing';
 import { mount, ReactWrapper } from 'enzyme';
 import { act } from 'react-dom/test-utils';
-import { MockedProvider } from '@apollo/client/testing';
-import { ToastProvider } from 'react-toast-notifications';
 import { BrowserRouter as Router } from 'react-router-dom';
-import WatchBtn from 'src/components/buttons/WatchBtn';
-import ShareBtn from 'src/modules/auctions/AuctionPage/GeneralInformation/ShareBtn';
-import { AuctionQueryAuction } from 'src/helpers/testHelpers/auction';
+import { ToastProvider } from 'react-toast-notifications';
+
 import { FollowAuctionMutation, UnfollowAuctionMutation } from 'src/apollo/queries/auctions';
+import WatchBtn from 'src/components/buttons/WatchBtn';
+import { AuctionQueryAuction } from 'src/helpers/testHelpers/auction';
 import * as auth from 'src/helpers/useAuth';
+import ShareBtn from 'src/modules/auctions/AuctionPage/GeneralInformation/ShareBtn';
 
 import AuctionDetails from '..';
 

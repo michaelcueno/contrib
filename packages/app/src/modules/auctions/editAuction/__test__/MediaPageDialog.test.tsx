@@ -1,8 +1,8 @@
 import { mount } from 'enzyme';
 import { BrowserRouter as Router } from 'react-router-dom';
 
-import { attachments } from 'src/helpers/testHelpers/attachments';
 import AttachmentModal from 'src/components/modals/AttachmentModal';
+import { attachments } from 'src/helpers/testHelpers/attachments';
 
 jest.mock('src/components/modals/TermsConfirmationDialog', () => () => <></>);
 

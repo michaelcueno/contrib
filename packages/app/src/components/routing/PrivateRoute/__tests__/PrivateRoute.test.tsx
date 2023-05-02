@@ -1,12 +1,12 @@
+import { MockedProvider } from '@apollo/client/testing';
 import { ReactWrapper, mount } from 'enzyme';
 import { createMemoryHistory } from 'history';
 import { Router, MemoryRouter } from 'react-router-dom';
-import { MockedProvider } from '@apollo/client/testing';
 
-import PrivateRoute from 'src/components/routing/PrivateRoute';
-import * as auth from 'src/helpers/useAuth';
-import { testAccount } from 'src/helpers/testHelpers/account';
 import { UserAccountContext } from 'src/components/helpers/UserAccountProvider/UserAccountContext';
+import PrivateRoute from 'src/components/routing/PrivateRoute';
+import { testAccount } from 'src/helpers/testHelpers/account';
+import * as auth from 'src/helpers/useAuth';
 
 const spyUseAuth = jest.spyOn(auth, 'useAuth');
 

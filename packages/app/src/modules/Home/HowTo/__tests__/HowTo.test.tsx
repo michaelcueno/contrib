@@ -1,5 +1,5 @@
-import { mount } from 'enzyme';
 import { MockedProvider } from '@apollo/client/testing';
+import { mount } from 'enzyme';
 import { BrowserRouter } from 'react-router-dom';
 import { ToastProvider } from 'react-toast-notifications';
 

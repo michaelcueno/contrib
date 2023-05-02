@@ -1,8 +1,7 @@
-import { mount, ReactWrapper } from 'enzyme';
-
-import { ToastProvider } from 'react-toast-notifications';
 import { MockedProvider } from '@apollo/client/testing';
+import { mount, ReactWrapper } from 'enzyme';
 import { act } from 'react-dom/test-utils';
+import { ToastProvider } from 'react-toast-notifications';
 
 import { SendOtpMutation } from 'src/apollo/queries/phoneNumberMutations';
 
@@ -77,7 +76,7 @@ describe('PhoneNumberConfirmation modal step ', () => {
         wrapper!.update();
       });
       const buttonDisabledValue = wrapper.find('button').first().prop('disabled');
-      
+
       expect(buttonDisabledValue).toEqual(false);
     });
 

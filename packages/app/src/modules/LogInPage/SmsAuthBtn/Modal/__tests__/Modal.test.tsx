@@ -1,12 +1,11 @@
-import { mount, ReactWrapper } from 'enzyme';
-
-import { ToastProvider } from 'react-toast-notifications';
 import { MockedProvider } from '@apollo/client/testing';
+import { mount, ReactWrapper } from 'enzyme';
 import { act } from 'react-dom/test-utils';
+import { ToastProvider } from 'react-toast-notifications';
 
 import Dialog from 'src/components/modals/Dialog';
 
-import { Modal } from '../';
+import { Modal } from '..';
 
 const onCloseMock = jest.fn();
 

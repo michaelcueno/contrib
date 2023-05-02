@@ -1,4 +1,5 @@
 import { mount, ReactWrapper } from 'enzyme';
+
 import ClickableTr from 'src/components/wrappers/ClickableTr';
 
 const mockHistoryFn = jest.fn();

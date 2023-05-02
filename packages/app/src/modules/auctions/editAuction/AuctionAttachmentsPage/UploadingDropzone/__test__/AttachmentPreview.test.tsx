@@ -1,11 +1,12 @@
 import { MockedProvider } from '@apollo/client/testing';
 import { render } from '@testing-library/react';
+import { mount, ReactWrapper } from 'enzyme';
 import { act } from 'react-dom/test-utils';
 import { MemoryRouter } from 'react-router-dom';
-import { mount, ReactWrapper } from 'enzyme';
-import { DeleteAuctionMediaMutation } from 'src/apollo/queries/auctions';
 
+import { DeleteAuctionMediaMutation } from 'src/apollo/queries/auctions';
 import { CloseButton } from 'src/components/buttons/CloseButton';
+
 import AttachmentPreview from '../AttachmentPreview';
 
 jest.mock('src/components/modals/TermsConfirmationDialog', () => () => <></>);

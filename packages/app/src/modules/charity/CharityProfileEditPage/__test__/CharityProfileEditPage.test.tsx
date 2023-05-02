@@ -1,14 +1,15 @@
-import { act } from 'react-dom/test-utils';
-import { mount, ReactWrapper } from 'enzyme';
 import { InMemoryCache } from '@apollo/client';
-import { MemoryRouter } from 'react-router-dom';
 import { MockedProvider } from '@apollo/client/testing';
+import { mount, ReactWrapper } from 'enzyme';
+import { act } from 'react-dom/test-utils';
+import { MemoryRouter } from 'react-router-dom';
 import { ToastProvider } from 'react-toast-notifications';
 
-import Layout from 'src/components/layouts/Layout';
-import Form from 'src/components/forms/Form/Form';
-import { CharityProfileEditPage } from '../CharityProfileEditPage';
 import { GetCharity, UpdateCharityProfileMutation } from 'src/apollo/queries/charityProfile';
+import Form from 'src/components/forms/Form/Form';
+import Layout from 'src/components/layouts/Layout';
+
+import { CharityProfileEditPage } from '../CharityProfileEditPage';
 
 const mockHistoryFn = jest.fn();
 

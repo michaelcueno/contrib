@@ -1,13 +1,14 @@
-import { BrowserRouter as Router } from 'react-router-dom';
-import { auction } from 'src/helpers/testHelpers/auction';
-import { mount } from 'enzyme';
 import { gql } from '@apollo/client';
 import { MockedProvider } from '@apollo/client/testing';
+import { mount } from 'enzyme';
+import { act } from 'react-dom/test-utils';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { ToastProvider } from 'react-toast-notifications';
 
-import { Modal } from '../StopOrActiveButton/Modal';
+import { auction } from 'src/helpers/testHelpers/auction';
+
 import { StopOrActiveButton } from '../StopOrActiveButton';
-import { act } from 'react-dom/test-utils';
+import { Modal } from '../StopOrActiveButton/Modal';
 
 describe('Should render correctly "StopOrActiveButton"', () => {
   const props: any = {

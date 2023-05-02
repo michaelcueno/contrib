@@ -1,15 +1,18 @@
 import React from 'react';
+
+import { InMemoryCache } from '@apollo/client';
 import { MockedProvider } from '@apollo/client/testing';
 import { mount, ReactWrapper } from 'enzyme';
-import { AuctionsListQuery } from 'src/apollo/queries/auctions';
-import { auction } from 'src/helpers/testHelpers/auction';
-import { MemoryRouter } from 'react-router-dom';
-import { InMemoryCache } from '@apollo/client';
-import EndingSoon from '../EndingSoon';
-import { ToastProvider } from 'react-toast-notifications';
 import { act } from 'react-dom/test-utils';
-import { AuctionStatus } from 'src/types/Auction';
+import { MemoryRouter } from 'react-router-dom';
+import { ToastProvider } from 'react-toast-notifications';
+
+import { AuctionsListQuery } from 'src/apollo/queries/auctions';
 import Slider from 'src/components/custom/Slider';
+import { auction } from 'src/helpers/testHelpers/auction';
+import { AuctionStatus } from 'src/types/Auction';
+
+import EndingSoon from '../EndingSoon';
 
 jest.spyOn(React, 'useEffect').mockImplementationOnce((f) => f());
 const cacheWithItems = new InMemoryCache();

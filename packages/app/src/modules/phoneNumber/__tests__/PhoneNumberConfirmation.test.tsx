@@ -1,21 +1,20 @@
-import { mount, ReactWrapper } from 'enzyme';
-
-import { MockedProvider } from '@apollo/client/testing';
 import * as ApolloClient from '@apollo/client';
+import { MockedProvider } from '@apollo/client/testing';
+import { mount, ReactWrapper } from 'enzyme';
+import { FormApi } from 'final-form';
+import { Button } from 'react-bootstrap';
 import { act } from 'react-dom/test-utils';
 import { Form } from 'react-final-form';
-import { Button } from 'react-bootstrap';
-import { FormApi } from 'final-form';
 
+import { MyAccountQuery } from 'src/apollo/queries/accountQuery';
 import {
   ConfirmPhoneNumberMutation,
   ConfirmPhoneNumberWithInvitationMutation,
   ResendOtpMutation,
   ResendOtpWithInvitationMutation,
 } from 'src/apollo/queries/phoneNumberMutations';
-import { MyAccountQuery } from 'src/apollo/queries/accountQuery';
-import { UserAccountStatus } from 'src/types/UserAccount';
 import * as auth from 'src/helpers/useAuth';
+import { UserAccountStatus } from 'src/types/UserAccount';
 
 import PhoneNumberConfirmation from '../Confirmation';
 import Layout from '../Layout';

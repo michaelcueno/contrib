@@ -1,12 +1,12 @@
-import { act } from 'react-dom/test-utils';
-import { mount, ReactWrapper } from 'enzyme';
-import { ToastProvider } from 'react-toast-notifications';
-import { BrowserRouter as Router } from 'react-router-dom';
 import { MockedProvider } from '@apollo/client/testing';
+import { mount, ReactWrapper } from 'enzyme';
+import { act } from 'react-dom/test-utils';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { ToastProvider } from 'react-toast-notifications';
 
+import { CreateInfluencerMutation } from 'src/apollo/queries/influencers';
 import Form from 'src/components/forms/Form/Form';
 import { CreateInfluencerModal } from 'src/modules/admin/Influencers/CreateInfluencer/CreateInfluencerModal';
-import { CreateInfluencerMutation } from 'src/apollo/queries/influencers';
 
 jest.mock('src/components/modals/TermsConfirmationDialog', () => () => <></>);
 

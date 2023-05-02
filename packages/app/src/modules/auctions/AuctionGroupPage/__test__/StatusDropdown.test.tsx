@@ -1,7 +1,9 @@
-import StatusDropdown from '../Filters/StatusDropdown';
-import { ReactWrapper, mount } from 'enzyme';
 import { MockedProvider } from '@apollo/client/testing';
+import { ReactWrapper, mount } from 'enzyme';
+
 import Select from 'src/components/forms/selects/Select';
+
+import StatusDropdown from '../Filters/StatusDropdown';
 
 describe('Should render correctly "StatusDropdown"', () => {
   const props: any = {

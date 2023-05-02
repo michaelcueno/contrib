@@ -1,9 +1,10 @@
+import { MockedProvider } from '@apollo/client/testing';
 import { mount, ReactWrapper } from 'enzyme';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { ToastProvider } from 'react-toast-notifications';
-import { MockedProvider } from '@apollo/client/testing';
-import Pagination from '../../../custom/Pagination';
+
 import { AdminPage } from '..';
+import Pagination from '../../../custom/Pagination';
 
 describe('AdminPage', () => {
   const props: any = {

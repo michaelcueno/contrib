@@ -1,5 +1,7 @@
-import StepByStepPageRow from '..';
 import { mount, ReactWrapper } from 'enzyme';
+
+import StepByStepPageRow from '..';
+
 const mockHistoryFn = jest.fn();
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),

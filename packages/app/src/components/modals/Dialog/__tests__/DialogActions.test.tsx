@@ -1,4 +1,5 @@
 import { shallow, ShallowWrapper } from 'enzyme';
+
 import DialogActions from 'src/components/modals/Dialog/DialogActions';
 
 describe('Should render correctly "DialogActions "', () => {

@@ -4,7 +4,7 @@ import { act } from 'react-dom/test-utils';
 
 import { AddAuctionMediaMutation, ContentStorageAuthDataQuery } from 'src/apollo/queries/auctions';
 
-import UploadingDropzone from '../';
+import UploadingDropzone from '..';
 
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),

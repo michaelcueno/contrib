@@ -1,12 +1,14 @@
-import { EditDeliveryParcelButton } from '../EditDeliveryParcelButton';
-import { BrowserRouter as Router } from 'react-router-dom';
-import { auction } from 'src/helpers/testHelpers/auction';
-import { mount, ReactWrapper } from 'enzyme';
 import { gql } from '@apollo/client';
 import { MockedProvider } from '@apollo/client/testing';
-import { ToastProvider } from 'react-toast-notifications';
-import { Modal } from '../EditDeliveryParcelButton/Modal';
+import { mount, ReactWrapper } from 'enzyme';
 import { act } from 'react-dom/test-utils';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { ToastProvider } from 'react-toast-notifications';
+
+import { auction } from 'src/helpers/testHelpers/auction';
+
+import { EditDeliveryParcelButton } from '../EditDeliveryParcelButton';
+import { Modal } from '../EditDeliveryParcelButton/Modal';
 
 describe('Should render correctly "EditDeliveryParcelButton"', () => {
   const props: any = {

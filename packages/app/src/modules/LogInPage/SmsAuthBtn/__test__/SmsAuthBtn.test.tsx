@@ -1,13 +1,11 @@
-import { mount, ReactWrapper } from 'enzyme';
-
 import { MockedProvider } from '@apollo/client/testing';
+import { mount, ReactWrapper } from 'enzyme';
+import { act } from 'react-dom/test-utils';
 import { ToastProvider } from 'react-toast-notifications';
 
-import { act } from 'react-dom/test-utils';
-import { Modal } from '../Modal';
+import { SmsAuthBtn } from '..';
 import AuthBtn from '../../AuthBtn';
-
-import { SmsAuthBtn } from '../';
+import { Modal } from '../Modal';
 
 const props = {
   returnURL: 'test returnUrl',

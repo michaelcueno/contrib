@@ -1,14 +1,14 @@
-import { mount } from 'enzyme';
-import { createMemoryHistory } from 'history';
-import { Router } from 'react-router-dom';
-import { act } from 'react-dom/test-utils';
 import { InMemoryCache } from '@apollo/client';
 import { MockedProvider } from '@apollo/client/testing';
+import { mount } from 'enzyme';
+import { createMemoryHistory } from 'history';
+import { act } from 'react-dom/test-utils';
+import { Router } from 'react-router-dom';
 
-import * as auth from 'src/helpers/useAuth';
 import { MyAccountQuery } from 'src/apollo/queries/accountQuery';
-import { UserAccountStatus } from 'src/types/UserAccount';
 import { UserAccountProvider } from 'src/components/helpers/UserAccountProvider/UserAccountProvider';
+import * as auth from 'src/helpers/useAuth';
+import { UserAccountStatus } from 'src/types/UserAccount';
 
 const props = {
   children: <></>,

@@ -1,15 +1,16 @@
+import { MockedProvider } from '@apollo/client/testing';
 import { mount, ReactWrapper } from 'enzyme';
 import { act } from 'react-dom/test-utils';
-import { MockedProvider } from '@apollo/client/testing';
-import { ToastProvider } from 'react-toast-notifications';
 import { BrowserRouter as Router } from 'react-router-dom';
-import FollowBtn from 'src/components/buttons/FollowBtn';
-import ShareBtn from '../ShareBtn';
-import { AuctionQueryAuction } from 'src/helpers/testHelpers/auction';
+import { ToastProvider } from 'react-toast-notifications';
+
 import { FollowAuctionMutation, UnfollowAuctionMutation } from 'src/apollo/queries/auctions';
+import FollowBtn from 'src/components/buttons/FollowBtn';
+import { AuctionQueryAuction } from 'src/helpers/testHelpers/auction';
 import * as auth from 'src/helpers/useAuth';
 
 import GeneralInformation from '..';
+import ShareBtn from '../ShareBtn';
 
 jest.mock('src/components/modals/TermsConfirmationDialog', () => () => <></>);
 

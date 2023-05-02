@@ -1,13 +1,12 @@
-import { act } from 'react-dom/test-utils';
-import { mount, ReactWrapper } from 'enzyme';
-import PhoneInput from 'react-phone-input-2';
-
 import { MockedProvider } from '@apollo/client/testing';
-import { Modal } from 'src/components/buttons/InviteButton/Modal';
-import { ToastProvider } from 'react-toast-notifications';
+import { mount, ReactWrapper } from 'enzyme';
+import { act } from 'react-dom/test-utils';
+import PhoneInput from 'react-phone-input-2';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { InviteInfluencerMutation } from 'src/apollo/queries/invitations';
+import { ToastProvider } from 'react-toast-notifications';
 
+import { InviteInfluencerMutation } from 'src/apollo/queries/invitations';
+import { Modal } from 'src/components/buttons/InviteButton/Modal';
 import Form from 'src/components/forms/Form/Form';
 
 describe('InviteModal', () => {

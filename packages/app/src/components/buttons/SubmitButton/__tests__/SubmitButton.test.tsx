@@ -1,6 +1,7 @@
 import { render } from '@testing-library/react';
 
 import Form from 'src/components/forms/Form/Form';
+
 import { SubmitButton } from '..';
 
 const mockedSumbit = jest.fn();
@@ -19,7 +20,7 @@ describe('SubmitButton', () => {
     it('renders component', () => {
       render(
         <Form onSubmit={mockedSumbit}>
-          <SubmitButton text="text" className="pb-0" disabled={true} />
+          <SubmitButton className="pb-0" disabled={true} text="text" />
         </Form>,
       );
     });

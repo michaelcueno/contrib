@@ -1,17 +1,17 @@
-import { act } from 'react-dom/test-utils';
-import { mount, ReactWrapper } from 'enzyme';
 import { InMemoryCache } from '@apollo/client';
-import { MemoryRouter } from 'react-router-dom';
 import { MockedProvider } from '@apollo/client/testing';
+import { mount, ReactWrapper } from 'enzyme';
+import { act } from 'react-dom/test-utils';
+import { MemoryRouter } from 'react-router-dom';
 import { ToastProvider } from 'react-toast-notifications';
 
-import Layout from 'src/components/layouts/Layout';
+import { GetAuctionDetailsQuery, UpdateAuctionMutation } from 'src/apollo/queries/auctions';
 import Form from 'src/components/forms/Form/Form';
+import { UserAccountContext } from 'src/components/helpers/UserAccountProvider/UserAccountContext';
+import Layout from 'src/components/layouts/Layout';
 import StepByStepPageLayout from 'src/components/layouts/StepByStepPageLayout';
 import { testAccount } from 'src/helpers/testHelpers/account';
 import { auctionForCreation as auction } from 'src/helpers/testHelpers/auction';
-import { UserAccountContext } from 'src/components/helpers/UserAccountProvider/UserAccountContext';
-import { GetAuctionDetailsQuery, UpdateAuctionMutation } from 'src/apollo/queries/auctions';
 
 import FairMarketValuePage from '../FairMarketValuePage';
 import MultipleFMV from '../FairMarketValuePage/MultipleFairMarketValue';
@@ -222,12 +222,12 @@ const submitValuesWithEmptyFMV = {
 
 const submitValuesWithEmptyName = {
   ...submitValuesWithMultipleItems,
-  ['name_2a7af71e-c43f-4fd2-926d-ce3e9b849938']: '',
+  'name_2a7af71e-c43f-4fd2-926d-ce3e9b849938': '',
 };
 
 const submitValuesWithEmptyContributor = {
   ...submitValuesWithMultipleItems,
-  ['contributor_2a7af71e-c43f-4fd2-926d-ce3e9b849938']: '',
+  'contributor_2a7af71e-c43f-4fd2-926d-ce3e9b849938': '',
 };
 
 describe('EditFairMarketValuePage ', () => {

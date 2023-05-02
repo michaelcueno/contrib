@@ -1,12 +1,14 @@
-import { AssistantsQuery } from '../../../apollo/queries/assistants';
-import Assistants from '../Assistants';
+import { InMemoryCache } from '@apollo/client';
 import { MockedProvider } from '@apollo/client/testing';
 import { mount, ReactWrapper } from 'enzyme';
-import { MemoryRouter } from 'react-router-dom';
-import { InMemoryCache } from '@apollo/client';
-import Layout from 'src/components/layouts/Layout';
 import { act } from 'react-dom/test-utils';
+import { MemoryRouter } from 'react-router-dom';
 import { ToastProvider } from 'react-toast-notifications';
+
+import Layout from 'src/components/layouts/Layout';
+
+import { AssistantsQuery } from '../../../apollo/queries/assistants';
+import Assistants from '../Assistants';
 
 const mockHistoryFn = jest.fn();
 jest.mock('react-router-dom', () => ({

@@ -1,7 +1,10 @@
 import { shallow, ShallowWrapper } from 'enzyme';
+
 import { auction } from 'src/helpers/testHelpers/auction';
 import { charity } from 'src/helpers/testHelpers/charity';
+
 import { Details } from '../Details';
+
 describe('Should render correctly "Details"', () => {
   const props: any = {
     auction: auction,

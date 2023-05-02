@@ -1,9 +1,10 @@
-import { act } from 'react-dom/test-utils';
-import { ReactWrapper, mount } from 'enzyme';
 import { MockedProvider } from '@apollo/client/testing';
+import { ReactWrapper, mount } from 'enzyme';
+import { act } from 'react-dom/test-utils';
+
+import SearchInput from 'src/components/forms/inputs/SearchInput';
 
 import Filters from '../Filters';
-import SearchInput from 'src/components/forms/inputs/SearchInput';
 
 describe('Should render correctly "Filters"', () => {
   const props: any = {

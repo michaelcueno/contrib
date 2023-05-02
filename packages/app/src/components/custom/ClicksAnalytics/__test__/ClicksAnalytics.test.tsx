@@ -1,8 +1,9 @@
 import { mount } from 'enzyme';
-import { act } from 'react-dom/test-utils';
 import { ToggleButton } from 'react-bootstrap';
+import { act } from 'react-dom/test-utils';
 
 import { metrics, blankMetrics, shortMetrics } from 'src/helpers/testHelpers/metrics';
+
 import { ClicksAnalytics } from '../index';
 
 jest.mock('../Doughnut', () => ({
@@ -61,13 +62,13 @@ describe('ClicksAnalytics', () => {
 
   describe('for AuctionPage', () => {
     it('renders metrics', () => {
-      const wrapper = mount(<ClicksAnalytics metrics={metrics} isAuctionPage={true} />);
+      const wrapper = mount(<ClicksAnalytics isAuctionPage={true} metrics={metrics} />);
       expect(wrapper).toHaveLength(1);
     });
 
     describe('without metrics', () => {
       it('renders message', async () => {
-        const wrapper = mount(<ClicksAnalytics metrics={blankMetrics} isAuctionPage={true} />);
+        const wrapper = mount(<ClicksAnalytics isAuctionPage={true} metrics={blankMetrics} />);
         expect(wrapper).toHaveLength(1);
         expect(wrapper.text()).toEqual('No information yet');
       });

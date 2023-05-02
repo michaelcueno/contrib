@@ -5,8 +5,8 @@ import { act } from 'react-dom/test-utils';
 import { MemoryRouter } from 'react-router-dom';
 import { ToastProvider } from 'react-toast-notifications';
 
-import Layout from 'src/components/layouts/Layout';
 import { GetInvitation } from 'src/apollo/queries/getInvitation';
+import Layout from 'src/components/layouts/Layout';
 import * as auth from 'src/helpers/useAuth';
 
 import InvitationPage from '..';

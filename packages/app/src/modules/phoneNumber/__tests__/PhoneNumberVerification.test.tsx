@@ -1,19 +1,18 @@
-import { mount, ReactWrapper } from 'enzyme';
-
 import * as ApolloClient from '@apollo/client';
 import { MockedProvider } from '@apollo/client/testing';
-import { act } from 'react-dom/test-utils';
+import { mount, ReactWrapper } from 'enzyme';
 import { FormApi } from 'final-form';
+import { act } from 'react-dom/test-utils';
 import { Form } from 'react-final-form';
 
-import PhoneInput from 'src/components/forms/inputs/PhoneInput';
-import { EnterPhoneNumberMutation, EnterInvitationCodeMutation } from 'src/apollo/queries/phoneNumberVerification';
 import { MyAccountQuery } from 'src/apollo/queries/accountQuery';
-import { UserAccountStatus } from 'src/types/UserAccount';
+import { EnterPhoneNumberMutation, EnterInvitationCodeMutation } from 'src/apollo/queries/phoneNumberVerification';
+import PhoneInput from 'src/components/forms/inputs/PhoneInput';
 import * as auth from 'src/helpers/useAuth';
+import { UserAccountStatus } from 'src/types/UserAccount';
 
-import PhoneNumberVerification from '../Verification';
 import Layout from '../Layout';
+import PhoneNumberVerification from '../Verification';
 
 const cache = new ApolloClient.InMemoryCache();
 

@@ -1,12 +1,10 @@
+import { InMemoryCache } from '@apollo/client';
+import { MockedProvider } from '@apollo/client/testing';
 import DineroFactory from 'dinero.js';
 import { mount, ReactWrapper } from 'enzyme';
-
 import { act } from 'react-dom/test-utils';
-import { ToastProvider } from 'react-toast-notifications';
 import { MemoryRouter } from 'react-router-dom';
-
-import { MockedProvider } from '@apollo/client/testing';
-import { InMemoryCache } from '@apollo/client';
+import { ToastProvider } from 'react-toast-notifications';
 
 import {
   AuctionForAdminPageQuery,
@@ -15,19 +13,16 @@ import {
   AuctionMetricsQuery,
 } from 'src/apollo/queries/auctions';
 import { PopulatedAuctionBidsQuery, ChargeCurrentBidMutation } from 'src/apollo/queries/bids';
-
+import AsyncButton from 'src/components/buttons/AsyncButton';
+import Layout from 'src/components/layouts/Layout';
 import { auctionForAdminPage } from 'src/helpers/testHelpers/auction';
-import { metrics } from 'src/helpers/testHelpers/metrics';
 import { bids } from 'src/helpers/testHelpers/bids';
-
+import { metrics } from 'src/helpers/testHelpers/metrics';
+import { Modal } from 'src/modules/admin/auctions/AdminAuctionPage/Modal';
 import { UserAccountStatus } from 'src/types/UserAccount';
 
-import { Modal } from 'src/modules/admin/auctions/AdminAuctionPage/Modal';
-import Layout from 'src/components/layouts/Layout';
-import AsyncButton from 'src/components/buttons/AsyncButton';
-
-import Bids from '../Bids';
 import AdminAuctionPage from '..';
+import Bids from '../Bids';
 
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),

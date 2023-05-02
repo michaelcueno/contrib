@@ -1,16 +1,17 @@
-import { act } from 'react-dom/test-utils';
-import { mount, ReactWrapper } from 'enzyme';
 import { InMemoryCache } from '@apollo/client';
-import { MemoryRouter } from 'react-router-dom';
 import { MockedProvider } from '@apollo/client/testing';
+import { mount, ReactWrapper } from 'enzyme';
+import { act } from 'react-dom/test-utils';
+import { MemoryRouter } from 'react-router-dom';
 import { ToastProvider } from 'react-toast-notifications';
-import { GetAuctionMediaQuery } from 'src/apollo/queries/auctions';
 
-import Layout from 'src/components/layouts/Layout';
+import { GetAuctionMediaQuery } from 'src/apollo/queries/auctions';
 import Form from 'src/components/forms/Form/Form';
+import Layout from 'src/components/layouts/Layout';
 import StepByStepPageRow from 'src/components/layouts/StepByStepPageLayout/StepByStepPageRow';
 import AttachmentModal from 'src/components/modals/AttachmentModal';
 import UploadingDropzone from 'src/modules/auctions/editAuction/AuctionAttachmentsPage/UploadingDropzone';
+
 import AuctionAttachmentsPage from '../AuctionAttachmentsPage';
 
 jest.mock('src/components/modals/TermsConfirmationDialog', () => () => <></>);

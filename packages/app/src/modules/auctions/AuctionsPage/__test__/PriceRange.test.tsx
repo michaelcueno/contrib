@@ -1,5 +1,5 @@
-import Nouislider from 'nouislider-react';
 import { mount } from 'enzyme';
+import Nouislider from 'nouislider-react';
 
 import PriceRange from '../Filters/PriceRange';
 

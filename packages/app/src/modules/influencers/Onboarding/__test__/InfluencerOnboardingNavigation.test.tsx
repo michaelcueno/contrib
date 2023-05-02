@@ -1,7 +1,10 @@
 import { mount, ReactWrapper } from 'enzyme';
 import { MemoryRouter } from 'react-router-dom';
+
 import Form from 'src/components/forms/Form/Form';
+
 import { InfluencerOnboardingNavigation } from '../InfluencerOnboardingNavigation';
+
 const mockedSumbit = jest.fn();
 describe('Should render correctly "InfluencerOnboardingNavigation"', () => {
   let wrapper: ReactWrapper;

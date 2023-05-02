@@ -1,6 +1,7 @@
-import { useUrlQueryParam } from '../useUrlQueryParam';
 import { shallow, mount } from 'enzyme';
 import { MemoryRouter, Route } from 'react-router-dom';
+
+import { useUrlQueryParam } from '../useUrlQueryParam';
 
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),

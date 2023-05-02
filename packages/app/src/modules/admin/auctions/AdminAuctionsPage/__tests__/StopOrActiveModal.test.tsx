@@ -1,11 +1,12 @@
-import { act } from 'react-dom/test-utils';
-import { mount, ReactWrapper } from 'enzyme';
 import { MockedProvider } from '@apollo/client/testing';
+import { mount, ReactWrapper } from 'enzyme';
+import { act } from 'react-dom/test-utils';
 import { ToastProvider } from 'react-toast-notifications';
 
-import Form from 'src/components/forms/Form/Form';
-import { Modal } from '../StopOrActiveButton/Modal';
 import { StopAuctionMutation } from 'src/apollo/queries/auctions';
+import Form from 'src/components/forms/Form/Form';
+
+import { Modal } from '../StopOrActiveButton/Modal';
 
 delete window.location;
 window.location = { ...window.location, reload: jest.fn() };

@@ -1,18 +1,18 @@
-import { mount, ReactWrapper } from 'enzyme';
-import { Router } from 'react-router-dom';
-import { act } from 'react-dom/test-utils';
-import { ToastProvider } from 'react-toast-notifications';
-import { MockedProvider } from '@apollo/client/testing';
 import { InMemoryCache } from '@apollo/client';
+import { MockedProvider } from '@apollo/client/testing';
+import { mount, ReactWrapper } from 'enzyme';
 import { createMemoryHistory } from 'history';
+import { act } from 'react-dom/test-utils';
+import { Router } from 'react-router-dom';
+import { ToastProvider } from 'react-toast-notifications';
 
 import { AuctionQuery, AuctionSubscription } from 'src/apollo/queries/auctions';
-import { AuctionQueryAuction } from 'src/helpers/testHelpers/auction';
+import { UserAccountContext } from 'src/components/helpers/UserAccountProvider/UserAccountContext';
 import Layout from 'src/components/layouts/Layout';
 import { testAccount } from 'src/helpers/testHelpers/account';
-import { UserAccountContext } from 'src/components/helpers/UserAccountProvider/UserAccountContext';
+import { AuctionQueryAuction } from 'src/helpers/testHelpers/auction';
 
-import AuctionPage from '../';
+import AuctionPage from '..';
 
 const history = createMemoryHistory();
 

@@ -1,12 +1,14 @@
-import ShortLinkPage from '../index';
+import { InMemoryCache } from '@apollo/client';
 import { MockedProvider } from '@apollo/client/testing';
 import { mount, ReactWrapper } from 'enzyme';
+import { act } from 'react-dom/test-utils';
+import { MemoryRouter } from 'react-router-dom';
+import { ToastProvider } from 'react-toast-notifications';
+
 import { UpdateOrCreateAuctionMetricsMutation } from 'src/apollo/queries/auctions';
 import { GetLinkQuery } from 'src/apollo/queries/shortLink';
-import { MemoryRouter } from 'react-router-dom';
-import { InMemoryCache } from '@apollo/client';
-import { ToastProvider } from 'react-toast-notifications';
-import { act } from 'react-dom/test-utils';
+
+import ShortLinkPage from '../index';
 
 const withAnotherHostCahe = new InMemoryCache();
 const withNullLinkCahe = new InMemoryCache();
@@ -34,7 +36,7 @@ global.window.location = {
 };
 
 const mockFn = jest.fn();
-let assignMock = jest.fn();
+const assignMock = jest.fn();
 
 delete window.location;
 window.location = { assign: assignMock };

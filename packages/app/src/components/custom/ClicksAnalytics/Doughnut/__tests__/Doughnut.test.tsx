@@ -1,8 +1,8 @@
-import { ChartDoughnut } from '../index';
-
+import { MockedProvider } from '@apollo/client/testing';
 import { mount, ReactWrapper } from 'enzyme';
 
-import { MockedProvider } from '@apollo/client/testing';
+import { ChartDoughnut } from '../index';
+
 jest.mock('react-chartjs-2', () => ({
   Doughnut: () => null,
 }));

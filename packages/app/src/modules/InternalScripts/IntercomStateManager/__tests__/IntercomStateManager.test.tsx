@@ -1,10 +1,11 @@
 import { mount, ReactWrapper } from 'enzyme';
 import { mocked } from 'ts-jest/utils';
 
-import IntercomStateManager from '../index';
 import { UserAccountContext } from 'src/components/helpers/UserAccountProvider/UserAccountContext';
 import { testAccount } from 'src/helpers/testHelpers/account';
 import * as auth from 'src/helpers/useAuth';
+
+import IntercomStateManager from '../index';
 
 describe('IntercomStateManager', () => {
   let wrapper: ReactWrapper;

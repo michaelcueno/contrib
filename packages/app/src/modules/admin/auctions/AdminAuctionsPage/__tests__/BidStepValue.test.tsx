@@ -1,12 +1,15 @@
-import { BidStepValueChangeButton } from '../BidStepValueChangeButton';
-import { BrowserRouter as Router } from 'react-router-dom';
-import { auction } from 'src/helpers/testHelpers/auction';
-import { mount, ReactWrapper } from 'enzyme';
 import { gql } from '@apollo/client';
 import { MockedProvider } from '@apollo/client/testing';
-import { ToastProvider } from 'react-toast-notifications';
-import { Modal } from 'src/modules/admin/auctions/AdminAuctionsPage/BidStepValueChangeButton/Modal';
+import { mount, ReactWrapper } from 'enzyme';
 import { act } from 'react-dom/test-utils';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { ToastProvider } from 'react-toast-notifications';
+
+import { auction } from 'src/helpers/testHelpers/auction';
+import { Modal } from 'src/modules/admin/auctions/AdminAuctionsPage/BidStepValueChangeButton/Modal';
+
+import { BidStepValueChangeButton } from '../BidStepValueChangeButton';
+
 describe('Should render correctly "BidStepValueChangeButton"', () => {
   const props: any = {
     auction,

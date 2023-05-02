@@ -1,9 +1,9 @@
-import { mount, ReactWrapper } from 'enzyme';
-import { ToastProvider } from 'react-toast-notifications';
-import { MemoryRouter } from 'react-router-dom';
-import { act } from 'react-dom/test-utils';
-import { MockedProvider } from '@apollo/client/testing';
 import { InMemoryCache } from '@apollo/client';
+import { MockedProvider } from '@apollo/client/testing';
+import { mount, ReactWrapper } from 'enzyme';
+import { act } from 'react-dom/test-utils';
+import { MemoryRouter } from 'react-router-dom';
+import { ToastProvider } from 'react-toast-notifications';
 
 import { GetAuctionsForProfilePageQuery } from 'src/apollo/queries/userProfile';
 import { auction } from 'src/helpers/testHelpers/auction';

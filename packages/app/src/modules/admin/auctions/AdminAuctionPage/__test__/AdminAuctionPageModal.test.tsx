@@ -1,6 +1,6 @@
-import { BrowserRouter as Router } from 'react-router-dom';
-import { mount } from 'enzyme';
 import { MockedProvider } from '@apollo/client/testing';
+import { mount } from 'enzyme';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import { Modal } from '../Modal';
 

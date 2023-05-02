@@ -1,8 +1,10 @@
 import React from 'react';
-import Select from '..';
+
+import { act } from '@testing-library/react';
 import { mount, ReactWrapper } from 'enzyme';
 import { DropdownButton } from 'react-bootstrap';
-import { act } from '@testing-library/react';
+
+import Select from '..';
 
 describe('Should render correctly "Select"', () => {
   let e: React.SyntheticEvent;

@@ -1,15 +1,15 @@
-import { act } from 'react-dom/test-utils';
-import { mount, ReactWrapper } from 'enzyme';
-import { MemoryRouter, BrowserRouter as Router } from 'react-router-dom';
 import { MockedProvider } from '@apollo/client/testing';
-import { ToastProvider } from 'react-toast-notifications';
 import { waitFor } from '@testing-library/react';
+import { mount, ReactWrapper } from 'enzyme';
+import { act } from 'react-dom/test-utils';
+import { MemoryRouter, BrowserRouter as Router } from 'react-router-dom';
+import { ToastProvider } from 'react-toast-notifications';
 
-import Form from 'src/components/forms/Form/Form';
-import { testAccount } from 'src/helpers/testHelpers/account';
 import { AcceptAccountTermsMutation } from 'src/apollo/queries/terms';
-import TermsConfirmationDialog from 'src/components/modals/TermsConfirmationDialog';
+import Form from 'src/components/forms/Form/Form';
 import { UserAccountContext } from 'src/components/helpers/UserAccountProvider/UserAccountContext';
+import TermsConfirmationDialog from 'src/components/modals/TermsConfirmationDialog';
+import { testAccount } from 'src/helpers/testHelpers/account';
 
 describe('TermsConfirmationDialog', () => {
   const assignMock = jest.fn();

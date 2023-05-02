@@ -1,15 +1,16 @@
-import { MyProfileQuery } from 'src/apollo/queries/profile';
-
-import { InfluencerOnboardingCharitiesPage } from '../InfluencerOnboardingCharitiesPage';
-import { UpdateFavoriteCharities } from 'src/apollo/queries/charities';
 import { InMemoryCache } from '@apollo/client';
 import { MockedProvider } from '@apollo/client/testing';
 import { mount, ReactWrapper } from 'enzyme';
 import { act } from 'react-dom/test-utils';
-import { ToastProvider } from 'react-toast-notifications';
 import { MemoryRouter } from 'react-router-dom';
-import Layout from 'src/components/layouts/Layout';
+import { ToastProvider } from 'react-toast-notifications';
+
+import { UpdateFavoriteCharities } from 'src/apollo/queries/charities';
+import { MyProfileQuery } from 'src/apollo/queries/profile';
 import Form from 'src/components/forms/Form/Form';
+import Layout from 'src/components/layouts/Layout';
+
+import { InfluencerOnboardingCharitiesPage } from '../InfluencerOnboardingCharitiesPage';
 
 jest.mock('src/components/modals/TermsConfirmationDialog', () => () => <></>);
 

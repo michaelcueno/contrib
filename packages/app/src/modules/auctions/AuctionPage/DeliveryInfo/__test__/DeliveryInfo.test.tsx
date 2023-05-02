@@ -1,6 +1,6 @@
+import { MockedProvider } from '@apollo/client/testing';
 import { mount } from 'enzyme';
 import { ToastProvider } from 'react-toast-notifications';
-import { MockedProvider } from '@apollo/client/testing';
 
 import { auction } from 'src/helpers/testHelpers/auction';
 
@@ -15,7 +15,7 @@ const props: any = {
 
 describe('AuctionDelivery', () => {
   it('renders without crashing', () => {
-   mount(
+    mount(
       <ToastProvider>
         <MockedProvider>
           <DeliveryInfo {...props} />

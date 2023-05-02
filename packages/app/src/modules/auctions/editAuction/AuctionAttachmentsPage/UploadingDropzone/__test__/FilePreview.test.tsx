@@ -1,5 +1,6 @@
-import FilePreview from '../FilePreview';
 import { mount, ReactWrapper } from 'enzyme';
+
+import FilePreview from '../FilePreview';
 
 const mockHistoryPush = jest.fn();
 jest.mock('react-router-dom', () => ({

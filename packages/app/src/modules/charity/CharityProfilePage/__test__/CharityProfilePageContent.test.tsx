@@ -1,21 +1,22 @@
-import { mount, ReactWrapper } from 'enzyme';
-import { DineroObject } from 'dinero.js';
-import { act } from 'react-dom/test-utils';
 import { InMemoryCache } from '@apollo/client';
-import { MemoryRouter } from 'react-router-dom';
 import { MockedProvider } from '@apollo/client/testing';
+import { DineroObject } from 'dinero.js';
+import { mount, ReactWrapper } from 'enzyme';
+import { act } from 'react-dom/test-utils';
+import { MemoryRouter } from 'react-router-dom';
 import { ToastProvider } from 'react-toast-notifications';
 
-import Layout from 'src/components/layouts/Layout';
-import WatchBtn from 'src/components/buttons/WatchBtn';
-import { AuctionStatus } from 'src/types/Auction';
-import { auction } from 'src/helpers/testHelpers/auction';
-import { testAccount } from 'src/helpers/testHelpers/account';
 import { AuctionsListQuery } from 'src/apollo/queries/auctions';
-import { CharityProfilePageContent } from '../CharityProfilePageContent';
 import { FollowCharity, UnfollowCharity } from 'src/apollo/queries/charityProfile';
+import WatchBtn from 'src/components/buttons/WatchBtn';
 import { UserAccountContext } from 'src/components/helpers/UserAccountProvider/UserAccountContext';
+import Layout from 'src/components/layouts/Layout';
+import { testAccount } from 'src/helpers/testHelpers/account';
+import { auction } from 'src/helpers/testHelpers/auction';
 import * as auth from 'src/helpers/useAuth';
+import { AuctionStatus } from 'src/types/Auction';
+
+import { CharityProfilePageContent } from '../CharityProfilePageContent';
 
 jest.mock('src/components/modals/TermsConfirmationDialog', () => () => <></>);
 jest.mock('src/components/custom/CoverImage', () => () => <></>);

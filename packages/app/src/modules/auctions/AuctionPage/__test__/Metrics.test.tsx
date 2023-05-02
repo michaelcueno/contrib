@@ -1,8 +1,8 @@
 import { mount } from 'enzyme';
 
-import Metrics from '../Metrics';
-
 import { metrics } from 'src/helpers/testHelpers/metrics';
+
+import Metrics from '../Metrics';
 
 const requestMetrics = jest.fn();
 

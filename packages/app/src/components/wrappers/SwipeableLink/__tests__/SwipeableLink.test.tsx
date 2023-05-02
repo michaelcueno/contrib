@@ -1,6 +1,6 @@
 import { mount, ReactWrapper } from 'enzyme';
-import { MemoryRouter } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { MemoryRouter, Link } from 'react-router-dom';
+
 import SwipeableLink from '..';
 
 const props = {

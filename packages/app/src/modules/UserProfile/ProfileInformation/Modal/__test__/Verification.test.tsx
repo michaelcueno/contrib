@@ -1,10 +1,10 @@
-import { mount, ReactWrapper } from 'enzyme';
 import { MockedProvider } from '@apollo/client/testing';
-import { MemoryRouter } from 'react-router-dom';
-import { ToastProvider } from 'react-toast-notifications';
+import { mount, ReactWrapper } from 'enzyme';
+import { FormApi } from 'final-form';
 import { act } from 'react-dom/test-utils';
 import { Form } from 'react-final-form';
-import { FormApi } from 'final-form';
+import { MemoryRouter } from 'react-router-dom';
+import { ToastProvider } from 'react-toast-notifications';
 
 import { VerifyChangePhoneNumberMutation } from 'src/apollo/queries/userProfile';
 import PhoneInput from 'src/components/forms/inputs/PhoneInput';

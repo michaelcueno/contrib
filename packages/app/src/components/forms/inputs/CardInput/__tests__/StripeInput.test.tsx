@@ -1,8 +1,8 @@
-import { act } from 'react-dom/test-utils';
-import { mount, ReactWrapper } from 'enzyme';
-import { loadStripe } from '@stripe/stripe-js';
-import { MemoryRouter } from 'react-router-dom';
 import { Elements } from '@stripe/react-stripe-js';
+import { loadStripe } from '@stripe/stripe-js';
+import { mount, ReactWrapper } from 'enzyme';
+import { act } from 'react-dom/test-utils';
+import { MemoryRouter } from 'react-router-dom';
 
 import StripeInput from '../StripeInput';
 

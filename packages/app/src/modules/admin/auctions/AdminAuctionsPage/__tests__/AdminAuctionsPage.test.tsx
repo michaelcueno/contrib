@@ -1,13 +1,15 @@
-import AdminAuctionsPage from '..';
+import { InMemoryCache } from '@apollo/client';
 import { MockedProvider } from '@apollo/client/testing';
 import { mount, ReactWrapper } from 'enzyme';
-import { AuctionsListQuery } from 'src/apollo/queries/auctions';
-import { MemoryRouter } from 'react-router-dom';
-import { InMemoryCache } from '@apollo/client';
-import { ToastProvider } from 'react-toast-notifications';
 import { act } from 'react-dom/test-utils';
-import { AdminPage } from 'src/components/layouts/AdminPage';
+import { MemoryRouter } from 'react-router-dom';
+import { ToastProvider } from 'react-toast-notifications';
+
+import { AuctionsListQuery } from 'src/apollo/queries/auctions';
 import SearchInput from 'src/components/forms/inputs/SearchInput';
+import { AdminPage } from 'src/components/layouts/AdminPage';
+
+import AdminAuctionsPage from '..';
 
 const cache = new InMemoryCache();
 

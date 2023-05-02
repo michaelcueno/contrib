@@ -1,12 +1,13 @@
-import { act } from 'react-dom/test-utils';
-import { ReactWrapper, mount } from 'enzyme';
+import { InMemoryCache } from '@apollo/client';
 import { MockedProvider } from '@apollo/client/testing';
+import { ReactWrapper, mount } from 'enzyme';
+import { act } from 'react-dom/test-utils';
+
+import { ActiveCharitiesList } from 'src/apollo/queries/charities';
+import SearchInput from 'src/components/forms/inputs/SearchInput';
+import { CharitySearchSelect } from 'src/components/forms/selects/CharitySearchSelect';
 
 import Filters from '../Filters';
-import { InMemoryCache } from '@apollo/client';
-import SearchInput from 'src/components/forms/inputs/SearchInput';
-import { ActiveCharitiesList } from 'src/apollo/queries/charities';
-import { CharitySearchSelect } from 'src/components/forms/selects/CharitySearchSelect';
 
 describe('Should render correctly "Filters"', () => {
   const props: any = {

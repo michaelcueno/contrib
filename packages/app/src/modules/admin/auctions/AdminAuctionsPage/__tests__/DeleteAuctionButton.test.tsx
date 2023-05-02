@@ -1,11 +1,14 @@
-import { DeleteAuctionButton } from '../DeleteAuctionButton';
-import { BrowserRouter as Router } from 'react-router-dom';
-import { auction } from 'src/helpers/testHelpers/auction';
-import { mount, ReactWrapper } from 'enzyme';
 import { gql } from '@apollo/client';
 import { MockedProvider } from '@apollo/client/testing';
+import { mount, ReactWrapper } from 'enzyme';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { ToastProvider } from 'react-toast-notifications';
+
 import { Modal } from 'src/components/modals/AdminAuctionsPageModal';
+import { auction } from 'src/helpers/testHelpers/auction';
+
+import { DeleteAuctionButton } from '../DeleteAuctionButton';
+
 describe('Should render correctly "DeleteAuctionButton"', () => {
   const props: any = {
     auction,

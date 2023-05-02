@@ -1,11 +1,9 @@
 import { mount, ReactWrapper } from 'enzyme';
-
-import { act } from 'react-dom/test-utils';
 import { Button } from 'react-bootstrap';
-
-import { QRCodeModal } from '../Modal';
+import { act } from 'react-dom/test-utils';
 
 import ShareBtn from '..';
+import { QRCodeModal } from '../Modal';
 
 const props: any = {
   link: 'link',

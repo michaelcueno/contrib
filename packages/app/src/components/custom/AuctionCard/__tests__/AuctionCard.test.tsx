@@ -1,16 +1,18 @@
 import React from 'react';
+
+import { MockedProvider } from '@apollo/client/testing';
 import { mount, ReactWrapper } from 'enzyme';
 import { act } from 'react-dom/test-utils';
-import { MockedProvider } from '@apollo/client/testing';
 
 //import HeartBtn from 'src/components/buttons/HeartButton';
-import AuctionCard from 'src/components/custom/AuctionCard';
-import { CloseButton } from 'src/components/buttons/CloseButton';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { auction } from 'src/helpers/testHelpers/auction';
 import { ToastProvider } from 'react-toast-notifications';
-import { Modal } from 'src/components/modals/AdminAuctionsPageModal';
+
 import { FollowAuctionMutation, UnfollowAuctionMutation } from 'src/apollo/queries/auctions';
+import { CloseButton } from 'src/components/buttons/CloseButton';
+import AuctionCard from 'src/components/custom/AuctionCard';
+import { Modal } from 'src/components/modals/AdminAuctionsPageModal';
+import { auction } from 'src/helpers/testHelpers/auction';
 import * as auth from 'src/helpers/useAuth';
 
 const props: any = {

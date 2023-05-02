@@ -1,7 +1,8 @@
-import { act } from 'react-dom/test-utils';
-import { useShowNotification } from '../useShowNotification';
-import { ToastProvider } from 'react-toast-notifications';
 import { mount } from 'enzyme';
+import { act } from 'react-dom/test-utils';
+import { ToastProvider } from 'react-toast-notifications';
+
+import { useShowNotification } from '../useShowNotification';
 
 const TestHook = (props: { callback: Function }) => {
   const { callback } = props;

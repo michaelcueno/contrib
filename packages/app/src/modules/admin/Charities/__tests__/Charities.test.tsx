@@ -1,15 +1,16 @@
-import { act } from 'react-dom/test-utils';
-import { mount, ReactWrapper } from 'enzyme';
 import { InMemoryCache } from '@apollo/client';
-import { MemoryRouter } from 'react-router-dom';
 import { MockedProvider } from '@apollo/client/testing';
+import { mount, ReactWrapper } from 'enzyme';
+import { act } from 'react-dom/test-utils';
+import { MemoryRouter } from 'react-router-dom';
 import { ToastProvider } from 'react-toast-notifications';
 
-import CharitiesPage from '..';
-import ClickableTr from 'src/components/wrappers/ClickableTr';
+import { CharitiesListQuery } from 'src/apollo/queries/charities';
 import SearchInput from 'src/components/forms/inputs/SearchInput';
 import { AdminPage } from 'src/components/layouts/AdminPage';
-import { CharitiesListQuery } from 'src/apollo/queries/charities';
+import ClickableTr from 'src/components/wrappers/ClickableTr';
+
+import CharitiesPage from '..';
 
 const cache = new InMemoryCache();
 

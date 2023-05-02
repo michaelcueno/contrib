@@ -1,8 +1,8 @@
 import { InMemoryCache } from '@apollo/client';
 import { MockedProvider } from '@apollo/client/testing';
-import { ToastProvider } from 'react-toast-notifications';
 import { render } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
+import { ToastProvider } from 'react-toast-notifications';
 
 import { AuctionsListQuery } from 'src/apollo/queries/auctions';
 

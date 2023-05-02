@@ -2,6 +2,7 @@ import { mount, ReactWrapper } from 'enzyme';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 import MenuNavLink from '../Menu/MenuNavLink';
+
 const props: any = {
   link: '/',
   title: 'test',

@@ -1,5 +1,6 @@
-import { ParcelProps } from '../ParcelProps';
 import { Auction, AuctionStatus, AuctionDeliveryStatus } from 'src/types/Auction';
+
+import { ParcelProps } from '../ParcelProps';
 
 describe('ParcelProps function test', () => {
   const auction: Auction = {

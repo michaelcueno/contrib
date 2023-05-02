@@ -1,18 +1,18 @@
-import { act } from 'react-dom/test-utils';
-import { mount, ReactWrapper } from 'enzyme';
 import { InMemoryCache } from '@apollo/client';
-import { MemoryRouter } from 'react-router-dom';
 import { MockedProvider } from '@apollo/client/testing';
+import { mount, ReactWrapper } from 'enzyme';
+import { act } from 'react-dom/test-utils';
+import { MemoryRouter } from 'react-router-dom';
 import { ToastProvider } from 'react-toast-notifications';
 
-import DeliveryStatusPage from '..';
 import { AuctionQuery } from 'src/apollo/queries/auctions';
+import { UserAccountContext } from 'src/components/helpers/UserAccountProvider/UserAccountContext';
+import Layout from 'src/components/layouts/Layout';
 import { testAccount } from 'src/helpers/testHelpers/account';
 import { AuctionQueryAuction } from 'src/helpers/testHelpers/auction';
-import { UserAccountContext } from 'src/components/helpers/UserAccountProvider/UserAccountContext';
 import * as auth from 'src/helpers/useAuth';
 
-import Layout from 'src/components/layouts/Layout';
+import DeliveryStatusPage from '..';
 
 const mockHistoryFn = jest.fn();
 

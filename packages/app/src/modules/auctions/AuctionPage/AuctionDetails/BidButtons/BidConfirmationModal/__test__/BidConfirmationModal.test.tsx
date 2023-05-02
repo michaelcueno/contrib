@@ -1,20 +1,20 @@
-import { act } from 'react-dom/test-utils';
-import { ReactWrapper, mount } from 'enzyme';
-import { loadStripe } from '@stripe/stripe-js';
-import { MemoryRouter } from 'react-router-dom';
-import { Elements } from '@stripe/react-stripe-js';
 import { MockedProvider } from '@apollo/client/testing';
-import { ToastProvider } from 'react-toast-notifications';
+import { Elements } from '@stripe/react-stripe-js';
+import { loadStripe } from '@stripe/stripe-js';
 import type { StripeCardElementChangeEvent } from '@stripe/stripe-js';
+import { ReactWrapper, mount } from 'enzyme';
+import { act } from 'react-dom/test-utils';
+import { MemoryRouter } from 'react-router-dom';
+import { ToastProvider } from 'react-toast-notifications';
 
-import Dialog from 'src/components/modals/Dialog';
-import AsyncButton from 'src/components/buttons/AsyncButton';
-import { testAccount } from 'src/helpers/testHelpers/account';
 import { BuyAuctionMutation } from 'src/apollo/queries/auctions';
 import { RegisterPaymentMethodMutation } from 'src/apollo/queries/bidding';
 import { MakeAuctionBidMutation } from 'src/apollo/queries/bids';
+import AsyncButton from 'src/components/buttons/AsyncButton';
 import { CardInput } from 'src/components/forms/inputs/CardInput';
 import { UserAccountContext } from 'src/components/helpers/UserAccountProvider/UserAccountContext';
+import Dialog from 'src/components/modals/Dialog';
+import { testAccount } from 'src/helpers/testHelpers/account';
 
 import { BidConfirmationModal } from '../BidConfirmationModal';
 

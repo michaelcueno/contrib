@@ -1,4 +1,5 @@
 import { mount, ReactWrapper } from 'enzyme';
+
 import { auction } from 'src/helpers/testHelpers/auction';
 
 import WatchBtn from '..';

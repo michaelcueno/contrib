@@ -1,11 +1,13 @@
-import { GetCharity } from 'src/apollo/queries/charityProfile';
+import { InMemoryCache } from '@apollo/client';
 import { MockedProvider } from '@apollo/client/testing';
 import { mount, ReactWrapper } from 'enzyme';
-import { MemoryRouter } from 'react-router-dom';
-import { InMemoryCache } from '@apollo/client';
-import Layout from 'src/components/layouts/Layout';
 import { act } from 'react-dom/test-utils';
+import { MemoryRouter } from 'react-router-dom';
 import { ToastProvider } from 'react-toast-notifications';
+
+import { GetCharity } from 'src/apollo/queries/charityProfile';
+import Layout from 'src/components/layouts/Layout';
+
 import { CharityProfilePage } from '../CharityProfilePage';
 
 const mockHistoryFn = jest.fn();

@@ -1,19 +1,19 @@
-import { act } from 'react-dom/test-utils';
-import { mount, ReactWrapper } from 'enzyme';
 import { InMemoryCache } from '@apollo/client';
-import { MemoryRouter } from 'react-router-dom';
 import { MockedProvider } from '@apollo/client/testing';
+import { mount, ReactWrapper } from 'enzyme';
+import { act } from 'react-dom/test-utils';
+import { MemoryRouter } from 'react-router-dom';
 import { ToastProvider } from 'react-toast-notifications';
 
-import Layout from 'src/components/layouts/Layout';
-import Form from 'src/components/forms/Form/Form';
-import { testAccount } from 'src/helpers/testHelpers/account';
-import { auctionForCreation as auction } from 'src/helpers/testHelpers/auction';
+import { GetAuctionDetailsQuery, UpdateAuctionMutation } from 'src/apollo/queries/auctions';
 import { ActiveCharitiesList } from 'src/apollo/queries/charities';
-import StepByStepPageLayout from 'src/components/layouts/StepByStepPageLayout';
+import Form from 'src/components/forms/Form/Form';
 import { CharitySearchSelect } from 'src/components/forms/selects/CharitySearchSelect';
 import { UserAccountContext } from 'src/components/helpers/UserAccountProvider/UserAccountContext';
-import { GetAuctionDetailsQuery, UpdateAuctionMutation } from 'src/apollo/queries/auctions';
+import Layout from 'src/components/layouts/Layout';
+import StepByStepPageLayout from 'src/components/layouts/StepByStepPageLayout';
+import { testAccount } from 'src/helpers/testHelpers/account';
+import { auctionForCreation as auction } from 'src/helpers/testHelpers/auction';
 
 import CharityPage from '../CharityPage';
 

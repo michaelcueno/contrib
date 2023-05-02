@@ -1,4 +1,5 @@
 import { shallow, ShallowWrapper } from 'enzyme';
+
 import Loading from '../index';
 
 describe('Should render correctly "Loading"', () => {

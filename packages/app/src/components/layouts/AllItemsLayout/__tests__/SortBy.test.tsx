@@ -1,5 +1,5 @@
-import { act } from 'react-dom/test-utils';
 import { ReactWrapper, mount } from 'enzyme';
+import { act } from 'react-dom/test-utils';
 
 import Select from 'src/components/forms/selects/Select';
 

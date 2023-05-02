@@ -1,12 +1,13 @@
-import { mount, ReactWrapper } from 'enzyme';
-
-import { MockedProvider } from '@apollo/client/testing';
 import { InMemoryCache } from '@apollo/client';
+import { MockedProvider } from '@apollo/client/testing';
+import { mount, ReactWrapper } from 'enzyme';
 import { act } from 'react-dom/test-utils';
+
 import { TotalRaisedAmountQuery } from 'src/apollo/queries/auctions';
 import { TopEarnedInfluencerQuery } from 'src/apollo/queries/influencers';
 
 import Status from '..';
+
 const cacheWithoutItems = new InMemoryCache();
 
 cacheWithoutItems.writeQuery({

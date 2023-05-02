@@ -1,7 +1,9 @@
 import { shallow, ShallowWrapper } from 'enzyme';
-import { bids } from 'src/helpers/testHelpers/bids';
-import { Bids } from '../Bids';
+
 import AsyncButton from 'src/components/buttons/AsyncButton';
+import { bids } from 'src/helpers/testHelpers/bids';
+
+import { Bids } from '../Bids';
 
 describe('Should render correctly "Bids"', () => {
   const props: any = {

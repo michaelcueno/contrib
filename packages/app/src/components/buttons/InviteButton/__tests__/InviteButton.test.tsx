@@ -1,7 +1,7 @@
 import { gql } from '@apollo/client';
-import { act } from 'react-dom/test-utils';
-import { mount, ReactWrapper } from 'enzyme';
 import { MockedProvider } from '@apollo/client/testing';
+import { mount, ReactWrapper } from 'enzyme';
+import { act } from 'react-dom/test-utils';
 import { ToastProvider } from 'react-toast-notifications';
 
 import { InviteButton } from '..';

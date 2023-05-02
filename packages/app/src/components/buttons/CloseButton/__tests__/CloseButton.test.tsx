@@ -1,4 +1,5 @@
 import { shallow, ShallowWrapper } from 'enzyme';
+
 import { CloseButton } from 'src/components/buttons/CloseButton';
 
 describe('Should render correctly "CloseButton"', () => {

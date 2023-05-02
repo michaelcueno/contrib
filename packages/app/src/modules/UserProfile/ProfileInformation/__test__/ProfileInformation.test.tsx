@@ -1,10 +1,10 @@
-import { act } from 'react-dom/test-utils';
-import { ReactWrapper, mount } from 'enzyme';
 import { MockedProvider } from '@apollo/client/testing';
+import { ReactWrapper, mount } from 'enzyme';
 import { Button } from 'react-bootstrap';
+import { act } from 'react-dom/test-utils';
 
-import Modal from '../Modal';
 import ProfileInformation from '../index';
+import Modal from '../Modal';
 
 describe('ProfileInformation', () => {
   const mockedSetShowDialog = jest.fn();

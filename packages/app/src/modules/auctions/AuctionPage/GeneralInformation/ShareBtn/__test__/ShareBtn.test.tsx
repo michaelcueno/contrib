@@ -1,6 +1,6 @@
 import { mount, ReactWrapper } from 'enzyme';
-import { ToastProvider } from 'react-toast-notifications';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
+import { ToastProvider } from 'react-toast-notifications';
 
 import ShareBtn from '..';
 
@@ -9,7 +9,7 @@ const props: any = {
 };
 describe('ShareBtn', () => {
   it('renders without crashing', () => {
-    let wrapper: ReactWrapper = mount(
+    const wrapper: ReactWrapper = mount(
       <ToastProvider>
         <ShareBtn {...props} />
       </ToastProvider>,

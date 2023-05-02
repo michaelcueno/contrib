@@ -1,17 +1,17 @@
 // yarn test src/modules/UserProfile/__test__/PaymentInformation.test.tsx
-import { act } from 'react-dom/test-utils';
-import { ReactWrapper, mount } from 'enzyme';
-import { loadStripe } from '@stripe/stripe-js';
-import { Elements } from '@stripe/react-stripe-js';
 import { MockedProvider } from '@apollo/client/testing';
+import { Elements } from '@stripe/react-stripe-js';
+import { loadStripe } from '@stripe/stripe-js';
 import type { StripeCardElementChangeEvent } from '@stripe/stripe-js';
-import { ToastProvider } from 'react-toast-notifications';
+import { ReactWrapper, mount } from 'enzyme';
 import { Button } from 'react-bootstrap';
+import { act } from 'react-dom/test-utils';
+import { ToastProvider } from 'react-toast-notifications';
 
-import { testAccount } from 'src/helpers/testHelpers/account';
 import { RegisterPaymentMethodMutation } from 'src/apollo/queries/bidding';
 import { CardInput } from 'src/components/forms/inputs/CardInput';
 import { UserAccountContext } from 'src/components/helpers/UserAccountProvider/UserAccountContext';
+import { testAccount } from 'src/helpers/testHelpers/account';
 
 import PaymentInformation from '../PaymentInformation';
 

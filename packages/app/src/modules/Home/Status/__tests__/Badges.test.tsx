@@ -1,12 +1,12 @@
-import { mount, ReactWrapper } from 'enzyme';
-
-import { MockedProvider } from '@apollo/client/testing';
 import { InMemoryCache } from '@apollo/client';
+import { MockedProvider } from '@apollo/client/testing';
+import { mount, ReactWrapper } from 'enzyme';
 import { act } from 'react-dom/test-utils';
 import { MemoryRouter } from 'react-router-dom';
+
 import { TotalRaisedAmountQuery } from 'src/apollo/queries/auctions';
-import { TopEarnedInfluencerQuery } from 'src/apollo/queries/influencers';
 import { TopCharityQuery } from 'src/apollo/queries/charities';
+import { TopEarnedInfluencerQuery } from 'src/apollo/queries/influencers';
 
 import { Badges } from '../Badges';
 import { TotalAmount } from '../Badges/TotalAmount';

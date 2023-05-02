@@ -1,15 +1,15 @@
 import React from 'react';
+
+import { MockedProvider } from '@apollo/client/testing';
 import { mount, ReactWrapper } from 'enzyme';
 import { act } from 'react-dom/test-utils';
-import { MockedProvider } from '@apollo/client/testing';
-import { MemoryRouter } from 'react-router-dom';
-
-import HeartBtn from 'src/components/buttons/HeartButton';
-import ItemCard from 'src/components/layouts/AllItemsLayout/ItemCard';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { MemoryRouter, BrowserRouter as Router } from 'react-router-dom';
 import { ToastProvider } from 'react-toast-notifications';
+
 import { FollowCharity, UnfollowCharity } from 'src/apollo/queries/charityProfile';
 import { FollowInfluencer, UnfollowInfluencer } from 'src/apollo/queries/influencers';
+import HeartBtn from 'src/components/buttons/HeartButton';
+import ItemCard from 'src/components/layouts/AllItemsLayout/ItemCard';
 import * as auth from 'src/helpers/useAuth';
 
 const item = {

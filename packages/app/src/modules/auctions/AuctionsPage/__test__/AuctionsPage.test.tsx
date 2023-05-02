@@ -1,12 +1,12 @@
 import { InMemoryCache } from '@apollo/client';
 import { MockedProvider } from '@apollo/client/testing';
 import { mount, ReactWrapper } from 'enzyme';
-import { BrowserRouter as Router } from 'react-router-dom';
 import { act } from 'react-dom/test-utils';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { ToastProvider } from 'react-toast-notifications';
 
-import { auction } from 'src/helpers/testHelpers/auction';
 import { AuctionPriceLimitsQuery, AuctionsListQuery } from 'src/apollo/queries/auctions';
+import { auction } from 'src/helpers/testHelpers/auction';
 
 import AuctionsPage from '..';
 import Filters from '../Filters';

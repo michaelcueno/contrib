@@ -1,8 +1,8 @@
+import { mount } from 'enzyme';
+
 import Pagination from '../Pagination';
 
 jest.mock('src/components/modals/TermsConfirmationDialog', () => () => <></>);
-
-import { mount } from 'enzyme';
 
 describe('Should render correctly "Pagination"', () => {
   const props: any = {

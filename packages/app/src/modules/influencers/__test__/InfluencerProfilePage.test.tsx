@@ -1,13 +1,13 @@
 import { InMemoryCache } from '@apollo/client';
 import { MockedProvider } from '@apollo/client/testing';
-import { BrowserRouter as Router } from 'react-router-dom';
 import { mount, ReactWrapper } from 'enzyme';
 import { act } from 'react-dom/test-utils';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { ToastProvider } from 'react-toast-notifications';
 
-import { GetInfluencerQuery } from '../../../apollo/queries/influencers';
 import { InfluencerProfilePageContent } from 'src/modules/influencers/InfluencerProfilePage/InfluencerProfilePageContent';
 
+import { GetInfluencerQuery } from '../../../apollo/queries/influencers';
 import { InfluencerProfilePage } from '../InfluencerProfilePage/InfluencerProfilePage';
 
 jest.mock('src/components/modals/TermsConfirmationDialog', () => () => <></>);

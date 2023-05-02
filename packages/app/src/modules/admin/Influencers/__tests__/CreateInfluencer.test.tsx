@@ -1,9 +1,10 @@
-import { mount, ReactWrapper } from 'enzyme';
 import { MockedProvider } from '@apollo/client/testing';
+import { mount, ReactWrapper } from 'enzyme';
 import { BrowserRouter as Router } from 'react-router-dom';
 
-import { CreateInfluencer } from '../CreateInfluencer';
 import { CreateInfluencerModal } from 'src/modules/admin/Influencers/CreateInfluencer/CreateInfluencerModal';
+
+import { CreateInfluencer } from '../CreateInfluencer';
 
 describe('CreateInfluencer', () => {
   let wrapper: ReactWrapper;

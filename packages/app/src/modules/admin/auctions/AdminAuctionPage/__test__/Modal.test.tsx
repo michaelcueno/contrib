@@ -1,5 +1,7 @@
 import { mount, ReactWrapper } from 'enzyme';
+
 import { bids } from 'src/helpers/testHelpers/bids';
+
 import { Modal } from '../Modal';
 
 describe('Should render correctly "Modal"', () => {

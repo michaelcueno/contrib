@@ -4,6 +4,7 @@ import { Image } from 'react-bootstrap';
 
 import AddVideoIcon from 'src/assets/icons/VideoIcon';
 import AddPhotoIcon from 'src/assets/images/PhotoIcon';
+
 import AttachmentThumbnail from '..';
 
 const error: any = new Error();

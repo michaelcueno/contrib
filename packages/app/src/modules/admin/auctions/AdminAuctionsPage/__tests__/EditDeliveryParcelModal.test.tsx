@@ -1,11 +1,12 @@
-import { act } from 'react-dom/test-utils';
-import { mount, ReactWrapper } from 'enzyme';
 import { MockedProvider } from '@apollo/client/testing';
+import { mount, ReactWrapper } from 'enzyme';
+import { act } from 'react-dom/test-utils';
 import { ToastProvider } from 'react-toast-notifications';
 
-import Form from 'src/components/forms/Form/Form';
-import { Modal } from '../EditDeliveryParcelButton/Modal';
 import { UpdateAuctionParcelMutation } from 'src/apollo/queries/auctions';
+import Form from 'src/components/forms/Form/Form';
+
+import { Modal } from '../EditDeliveryParcelButton/Modal';
 
 describe('Should render correctly "Modal"', () => {
   const props: any = {

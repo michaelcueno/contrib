@@ -10,7 +10,7 @@ describe('Should render correctly "CoverImage"', () => {
   };
 
   let wrapper: ReactWrapper;
-  
+
   beforeEach(() => {
     wrapper = mount(<CoverImage {...props} />);
   });

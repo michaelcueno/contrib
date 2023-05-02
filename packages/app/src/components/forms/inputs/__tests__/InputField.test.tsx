@@ -1,9 +1,9 @@
 import { mount, ReactWrapper } from 'enzyme';
-
 import { Form as BForm } from 'react-bootstrap';
 
-import InputField from '../InputField';
 import Form from 'src/components/forms/Form/Form';
+
+import InputField from '../InputField';
 
 const { Control } = BForm;
 const mockedSumbit = jest.fn();

@@ -8,7 +8,7 @@ describe('Item', () => {
     it('renders component', () => {
       const wrapper = mount(
         <BrowserRouter>
-          <Item icon="icon" text="text" btnText="btnText" />
+          <Item btnText="btnText" icon="icon" text="text" />
         </BrowserRouter>,
       );
       expect(wrapper!).toHaveLength(1);
@@ -18,7 +18,7 @@ describe('Item', () => {
     it('renders component', () => {
       const wrapper = mount(
         <BrowserRouter>
-          <Item withSeparator icon="icon" text="text" btnText="btnText" />
+          <Item withSeparator btnText="btnText" icon="icon" text="text" />
         </BrowserRouter>,
       );
       expect(wrapper!).toHaveLength(1);

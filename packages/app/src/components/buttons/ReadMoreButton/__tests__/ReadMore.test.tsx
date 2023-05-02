@@ -1,5 +1,5 @@
-import { act } from 'react-dom/test-utils';
 import { ReactWrapper, mount } from 'enzyme';
+import { act } from 'react-dom/test-utils';
 import LinesEllipsis from 'react-lines-ellipsis';
 
 import { ReadMore } from '../index';

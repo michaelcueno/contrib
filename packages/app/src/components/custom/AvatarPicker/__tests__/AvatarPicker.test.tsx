@@ -1,8 +1,9 @@
-import { mount } from 'enzyme';
 import React from 'react';
+
 import { MockedProvider } from '@apollo/client/testing';
-import { ToastProvider } from 'react-toast-notifications';
+import { mount } from 'enzyme';
 import { Button } from 'react-bootstrap';
+import { ToastProvider } from 'react-toast-notifications';
 
 import { UpdateInfluencerProfileAvatarMutation } from 'src/apollo/queries/profile';
 import { AvatarPicker } from 'src/components/custom/AvatarPicker';
