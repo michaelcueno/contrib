@@ -9,6 +9,8 @@ node_modules
 /server/dist
 /contrib-server/dist
 /client/dist
+/packages/api/dist
+/packages/app/dist
 
 # testing
 /coverage
@@ -45,6 +47,3 @@ debug.log
 react-app-env.d.ts
 coverage
 
-# dependencies
-package-lock.json
-yarn.lock
