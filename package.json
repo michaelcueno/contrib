@@ -22,6 +22,9 @@
     "body-parser": "^1.19.0",
     "graphql-upload": "^11.0.0"
   },
+  "resolutions": {
+    "@types/react": "17.0.43"
+  },
   "devDependencies": {
     "serve": "^14.2.0"
   }
