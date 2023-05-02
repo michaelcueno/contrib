@@ -9,13 +9,13 @@
     "packages/*"
   ],
   "scripts": {
-    "test": "yarn workspaces run test",
-    "build": "yarn workspaces run build",
-    "api:docker:build": "yarn workspace @contrib/api docker:build",
-    "api:docker:run": "yarn workspace @contrib/api docker:run",
-    "start:api": "yarn workspace @contrib/api start",
+    "test": "NODE_OPTIONS=--openssl-legacy-provider yarn workspaces run test",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider yarn workspaces run build",
+    "api:docker:build": "NODE_OPTIONS=--openssl-legacy-provider yarn workspace @contrib/api docker:build",
+    "api:docker:run": "NODE_OPTIONS=--openssl-legacy-provider yarn workspace @contrib/api docker:run",
+    "start:api": "NODE_OPTIONS=--openssl-legacy-provider yarn workspace @contrib/api start",
     "start:app": "yarn workspace @contrib/app start",
-    "start": "yarn start:api & yarn start:app",
+    "start": "NODE_OPTIONS=--openssl-legacy-provider yarn start:api & NODE_OPTIONS=--openssl-legacy-provider yarn start:app",
     "website:start": "yarn serve website"
   },
   "dependencies": {
