@@ -20,7 +20,7 @@ export class CloudTaskService {
   }
 
   public async createTask(returnURL: string, payload: object): Promise<void> {
-    if (AppConfig.environment.isLocal) return;
+    if (AppConfig.environment.isDev) return;
     if (!payload) throw new Error('Cannot create task without payload');
 
     const parent = this.cloudTaskClient.queuePath(

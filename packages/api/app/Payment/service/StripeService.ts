@@ -5,7 +5,7 @@ import { UserAccount } from '../../UserAccount/dto/UserAccount';
 import { UserAccountAddress } from '../../UserAccount/dto/UserAccountAddress';
 import { isValidAddressFields } from '../../../helpers/isValidAddressFields';
 
-import { AppConfig, requireEnvVar } from '../../../config';
+import { AppConfig } from '../../../config';
 import { AppLogger } from '../../../logger';
 
 export class StripeService {
@@ -24,7 +24,7 @@ export class StripeService {
   public async createStripeObjLink(stripeAccountId: string, charityId: string): Promise<Stripe.AccountLink> {
     return this.stripe.accountLinks.create({
       account: stripeAccountId,
-      refresh_url: requireEnvVar('APP_URL'),
+      refresh_url: AppConfig.app.url.toString(),
       return_url: this.stripeReturnURL(charityId),
       type: 'account_onboarding',
     });

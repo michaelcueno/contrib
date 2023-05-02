@@ -64,7 +64,7 @@ export class NotificationService {
     template: MessageTemplate,
     context?: { [key: string]: any },
   ): Promise<void> {
-    if (AppConfig.environment.isLocal) return this.sendMessageNow(phoneNumber, template, context);
+    if (AppConfig.environment.isDev) return this.sendMessageNow(phoneNumber, template, context);
 
     await this.cloudTaskService.createTask(this.cloudTaskService.target('notificationTaskTargetURL'), {
       phoneNumber,
