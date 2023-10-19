@@ -264,7 +264,9 @@ export class UserAccountService {
     if (findedAccount && authzId.startsWith('sms|')) return UserAccountService.makeUserAccount(findedAccount);
     if (findedAccount) throw new AppError(`${phoneNumber} is already in use`, ErrorCode.BAD_REQUEST);
 
-    const accountModel = await this.AccountModel.create({ authzId, phoneNumber, createdAt: dayjs().toISOString() });
+    // Hack - make every user and admin in development for demo purpose..
+    const isDev = AppConfig.environment.isDev;
+    const accountModel = await this.AccountModel.create({ authzId, phoneNumber, createdAt: dayjs().toISOString(), isAdmin: isDev});
     const account = UserAccountService.makeUserAccount(accountModel);
     await this.eventHub.broadcast(Events.USER_ACCOUNT_CREATED, account);
 
